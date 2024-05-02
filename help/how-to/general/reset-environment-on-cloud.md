@@ -156,7 +156,7 @@ git commit --allow-empty -m "<message>" && git push <origin> <branch>
 
 1. [환경에 SSH 추가](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/secure-connections.html).
 1. MySQL DB에 연결: `mysql -h database.internal` Pro 환경의 경우 다음을 참조하십시오. [MySQL 서비스 설정](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/service/mysql.html)).
-1. \&#39;main\` DB 를 삭제합니다. `drop database main;`
+1. \`main\` DB 를 삭제합니다. `drop database main;`
 1. 빈 \`main\` DB 만들기: `create database main;`
 1. 다음 구성 파일을 삭제합니다. `config.php` , `config.php` , `.bak,` , `env.php`, `env.php.bak`
 
