@@ -1,0 +1,69 @@
+---
+title: Adobe Commerce 처리 오류에 대한 OMS(Magento Order Management 시스템)
+description: 이 문서에서는 'bin/magento oms'를 실행하는 CLI에서 'getMode()' 오류가 발생하는 문제에 대한 해결 방법을 제공합니다:messages:Adobe Commerce용 Magento Order Management 시스템(OMS)의 '프로세스'
+exl-id: 83089465-f810-4a3b-bdb6-4720b44f0b49
+feature: System
+role: Developer
+source-git-commit: 1d2e0c1b4a8e3d79a362500ee3ec7bde84a6ce0d
+workflow-type: tm+mt
+source-wordcount: '208'
+ht-degree: 0%
+
+---
+
+# Adobe Commerce 처리 오류에 대한 OMS(Magento Order Management 시스템)
+
+이 문서에서는 을(를) 가져올 때 발생하는 문제에 대한 해결 방법을 제공합니다. `getMode()` 실행 중인 CLI에서 오류 발생 `bin/magento oms:messages:process` (Adobe Commerce용 Magento Order Management 시스템(OMS)에서).
+
+## 영향을 받는 제품 및 버전
+
+이 오류는 MCOM 커넥터 릴리스 3.1.1 및 3.2.0을 사용할 때 발생합니다. MCOM 커넥터 3.3.0에서 해결되었습니다. MDC 또는 MOM 버전에만 적용되는 것은 아닙니다.
+
+## 문제
+
+CLI에서 다음 명령을 실행할 때:
+
+`bin/magento oms:messages:process`
+
+다음과 유사한 오류 메시지가 CLI에 출력됩니다.
+
+```
+<project-id>@<project-id>:~$ php bin/magento oms:messages:process
+
+Processing messages...
+
+PHP Fatal error:Uncaught Error: Call to a member function getMode()
+on null in /app/<project-id>/vendor/magento/module-inventory-message-bus/Handler/OnAggregateStockUpdatedSubscriber.php:64
+
+Stack trace:
+
+  #0 [internal function]: Magento\InventoryMessageBus\Handler\OnAggregateStockUpdatedSubscriber->onUpdated(Object(Magento\InventoryMessageBus\Model\Event\OnAggregateStockUpdated))
+
+  #1 /app/<project-id>/vendor/magento/module-service-bus/Message/SingleMessageProcessor.php(81):
+  call_user_func(Array, Object(Magento\InventoryMessageBus\Model\Event\OnAggregateStockUpdated))
+
+  #2 [internal function]: Magento\ServiceBus\Message\SingleMessageProcessor->Magento\ServiceBus\Message\\{closure}(Array)
+
+  #3 /app/<project-id>/vendor/magento/module-service-bus/Message/SingleMessageProcessor.php(86):
+  array_map(Object(Closure), Array)
+
+  #4 /app/<project-id>/vendor/magento/module-service-bus/Message/Processor.php(110):
+  Magento\ServiceBus\Message\SingleMessageProcessor->process(Object(Magento\CommonMessageBus\Message\Message))
+
+  #5 /app/t in /app/<project-id>/vendor/magento/module-inventory-message-bus/Handler/OnAggregateStockUpdatedSubscriber.php
+  on line 64
+```
+
+## 원인
+
+이 문제는 커넥터가 처리를 시도할 때 발생합니다 `magento.inventory.source_management` 메시지. 커넥터는 이러한 메시지를 다음과 같이 처리하려고 합니다. `magento.inventory.source_stock_management.update` 모드 값이 필요한 메시지입니다. 왜냐하면 `magento.inventory.source_mangement` 메시지가 표시되면 오류가 발생합니다.
+
+## 솔루션
+
+이 문제를 해결하려면 CLI에서 다음 SQL 문을 실행하여 `mcom_api_messages` 표:
+
+`delete from mcom_api_messages;`
+
+## 관련 읽기
+
+OMS 문서 보기 [OMS 커넥터 설정 자습서](https://omsdocs.magento.com/en/integration/connector/setup-tutorial/).

@@ -1,0 +1,58 @@
+---
+title: 성능 저하를 방지하기 위해 캐시 활성화
+description: 이 문서에서는 특정 Adobe Commerce 캐시 유형이 비활성화되어 있어 발생하는 느린 사이트 문제를 해결하는 방법에 대해 설명합니다.
+exl-id: e4e5a753-efa3-4552-aaf6-28e44efcfa5b
+feature: Cache, Observability
+role: Developer
+source-git-commit: 958179e0f3efe08e65ea8b0c4c4e1015e3c5bb76
+workflow-type: tm+mt
+source-wordcount: '290'
+ht-degree: 0%
+
+---
+
+# 성능 저하를 방지하기 위해 캐시 활성화
+
+이 문서에서는 특정 Adobe Commerce 캐시 유형이 비활성화되어 있어 발생하는 느린 사이트 문제를 해결하는 방법에 대해 설명합니다.
+
+## 영향을 받는 제품 및 버전
+
+* 클라우드 인프라의 Adobe Commerce 2.2.x, 2.3.x
+* Adobe Commerce 온-프레미스 2.2.x, 2.3.x
+
+## 문제
+
+성능 저하가 나타납니다. 예를 들어 체크아웃 페이지가 느리게 로드되거나 New Relic에서 Apdex 값이 감소합니다.
+
+## 원인
+
+성능 저하의 한 가지 이유는 특정 Adobe Commerce 캐시 유형이 비활성화되었기 때문일 수 있습니다.
+
+## 솔루션
+
+1. 먼저 Adobe Commerce 캐시의 상태를 확인하여 문제가 있는지 확인합니다. 이를 위해, [환경에 SSH 추가](https://devdocs.magento.com/cloud/env/environments-ssh.html#ssh) 다음 명령을 실행합니다.
+
+   ```bash
+   php bin/magento cache:status
+   ```
+
+   각 캐시 유형의 상태가 표시됩니다( 비활성화의 경우 &quot;0&quot;, 활성화의 경우 &quot;1&quot;). 또는 다음 위치에서 이 정보를 가져올 수 있습니다. `app/etc/env.php` 파일.
+
+1. 비활성화된 캐시 유형을 조사합니다. Adobe에서 대체 지침을 받지 않은 경우 모든 Adobe Commerce 캐시 유형을 활성화해야 합니다. 타사 확장을 사용하려면 Adobe Commerce 캐시를 비활성화할 필요가 없습니다.
+1. 조사 결과 실수로 일부 캐시 유형을 비활성화한 것으로 확인되면 각 캐시 유형에 대해 다음 명령을 실행하여 활성화하십시오. `php bin/magento cache:enable <your_disabled_cache_type>`
+
+특정 Adobe Commerce 캐시 유형을 비활성화할 수 있는지 여부에 대한 우려 및/또는 질문이 있는 경우 [Adobe Commerce 지원 문의](/help/help-center-guide/help-center/magento-help-center-user-guide.md#submit-ticket) 추천을 요청합니다.
+
+## 관련 읽기
+
+Adobe Commerce 캐시 설명서 의 개발자 설명서:
+
+* [Adobe Commerce 캐시 개요](https://devdocs.magento.com/guides/v2.3/frontend-dev-guide/cache_for_frontdevs.html)
+* [캐시 관리](https://devdocs.magento.com/guides/v2.3/config-guide/cli/config-cli-subcommands-cache.html)
+
+성능 문제와 그에 대한 솔루션에 대한 기타 가능한 이유는 다음과 같습니다.
+
+* [Adobe Commerce 배너 출력을 비활성화하여 사이트 성능 향상](/help/troubleshooting/miscellaneous/disable-magento-banner-output-to-improve-site-performance.md)
+* [MySQL 테이블이 너무 큽니다.](/help/troubleshooting/database/mysql-tables-are-too-large.md)
+* [성능 저하, 느리고 오래 실행되는 크론](/help/troubleshooting/miscellaneous/slow-performance-slow-and-long-running-crons.md)
+* [성능 문제를 일으키는 제한된 관리자 액세스](/help/troubleshooting/miscellaneous/restricted-admin-access-causing-performance-issues.md)

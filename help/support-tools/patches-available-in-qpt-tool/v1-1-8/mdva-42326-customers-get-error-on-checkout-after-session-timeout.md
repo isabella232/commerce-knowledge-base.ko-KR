@@ -1,0 +1,75 @@
+---
+title: 'MDVA-42326: 고객이 세션 시간 제한 후 체크아웃 시 오류 발생'
+description: MDVA-42326 패치는 영구적 장바구니가 활성화되더라도 세션 시간 제한 후 체크아웃 시 오류가 발생하는 문제를 해결합니다. 이 패치는 [Quality Patches Tool (QPT)](/help/announcements/adobe-commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches.md) 1.1.8이 설치된 경우 사용할 수 있습니다. 패치 ID는 MDVA-42326입니다. 이 문제는 Adobe Commerce 2.4.4에서 수정됩니다.
+exl-id: bc9b71de-510d-4c4e-8b0d-9abf9a3e447f
+feature: Checkout, Orders
+role: Admin
+source-git-commit: 958179e0f3efe08e65ea8b0c4c4e1015e3c5bb76
+workflow-type: tm+mt
+source-wordcount: '541'
+ht-degree: 0%
+
+---
+
+# MDVA-42326: 세션 시간 제한 후 체크아웃 시 고객이 오류 발생
+
+MDVA-42326 패치는 영구적 장바구니가 활성화되더라도 세션 시간 제한 후 체크아웃 시 오류가 발생하는 문제를 해결합니다. 이 패치는 다음 경우에 사용할 수 있습니다. [품질 패치 도구(QPT)](/help/announcements/adobe-commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches.md) 1.1.8이 설치되었습니다. 패치 ID는 MDVA-42326입니다. 이 문제는 Adobe Commerce 2.4.4에서 수정됩니다.
+
+## 영향을 받는 제품 및 버전
+
+**패치는 Adobe Commerce 버전에 대해 만들어집니다.**
+
+* Adobe Commerce(모든 배포 방법) 2.4.3-p1
+
+**Adobe Commerce 버전과 호환:**
+
+* Adobe Commerce(모든 배포 방법) 2.3.6 - 2.3.7-p2, 2.4.1 - 2.4.3-p1
+
+>[!NOTE]
+>
+>이 패치는 새로운 품질 패치 도구 릴리스가 있는 다른 버전에 적용할 수 있습니다. 패치가 Adobe Commerce 버전과 호환되는지 확인하려면 `magento/quality-patches` 최신 버전으로 패키지하고 [[!DNL Quality Patches Tool]: 패치 검색 페이지](https://devdocs.magento.com/quality-patches/tool.html#patch-grid). 패치 ID를 검색 키워드로 사용하여 패치를 찾습니다.
+
+## 문제
+
+지속 장바구니가 활성화된 경우에도 세션 시간 초과 후 체크아웃 시 오류가 발생합니다.
+
+<u>전제 조건</u>:
+
+1. 다음으로 이동 **구성** > **일반** > **웹** > **기본 쿠키 설정** > **쿠키 수명** 및 을 (으)로 설정 **120**.
+1. 다음으로 이동 **구성** > **고객** > **고객 구성** > **온라인 고객 옵션** 및 두 값을 모두 다음으로 설정 **2**.
+1. 다음으로 이동 **구성** > **고객** > **지속적인 장바구니** 및 을 (으)로 설정 **사용**.
+1. 다음으로 이동 **구성** > **판매** > **결제 방법** 및 을 제외한 모든 결제 방법 끄기 **수표/우편환** (활성화해야 합니다.)
+
+<u>재현 단계</u>:
+
+1. 고객으로 로그인하고 일부 제품을 장바구니에 추가합니다.
+1. 장바구니를 확인하십시오.
+1. 2분 동안 기다립니다(사전 조건으로 설정됨). 세션이 시간 초과되어야 합니다.
+1. 클릭 **체크아웃으로 이동** 페이지를 새로 고치지 마십시오.
+1. 게스트로 체크아웃하고 배송 주소를 입력한 다음 배송 방법을 선택하십시오.
+1. 클릭 **다음**.
+1. 다음에서 **검토 및 결제** 페이지, 클릭 **주문**. 하나의 결제 수단만 허용되므로 고객은 결제 방법을 선택하지 않고 주문을 할 수 있어야 한다.
+
+<u>예상 결과</u>:
+
+고객이 주문할 수 있어야 합니다.
+
+<u>실제 결과</u>:
+
+고객에게 다음과 같은 오류가 발생합니다. *주소 유효성 검사 실패: 이메일의 형식이 잘못되었습니다.*.
+
+## 패치 적용
+
+개별 패치를 적용하려면 배포 방법에 따라 다음 링크를 사용합니다.
+
+* Adobe Commerce 또는 Magento Open Source 온-프레미스: [소프트웨어 업데이트 안내서 > 패치 적용](https://devdocs.magento.com/guides/v2.4/comp-mgr/patching/mqp.html) 개발자 설명서에서 확인할 수 있습니다.
+* 클라우드 인프라의 Adobe Commerce: [업그레이드 및 패치 > 패치 적용](https://devdocs.magento.com/cloud/project/project-patch.html) 개발자 설명서에서 확인할 수 있습니다.
+
+## 관련 읽기
+
+품질 패치 도구에 대한 자세한 내용은 다음을 참조하십시오.
+
+* [품질 패치 툴 출시: 품질 패치를 셀프서비스할 수 있는 새로운 툴](/help/announcements/adobe-commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches.md) 을 참조하십시오.
+* [품질 패치 도구 를 사용하여 Adobe Commerce 문제에 패치를 사용할 수 있는지 확인](/help/support-tools/patches-available-in-qpt-tool/check-patch-for-magento-issue-with-magento-quality-patches.md) 을 참조하십시오.
+
+QPT에서 사용할 수 있는 다른 패치에 대한 정보는 다음을 참조하십시오. [QPT에서 사용 가능한 패치](https://devdocs.magento.com/quality-patches/tool.html#patch-grid) 개발자 설명서에서 확인할 수 있습니다.

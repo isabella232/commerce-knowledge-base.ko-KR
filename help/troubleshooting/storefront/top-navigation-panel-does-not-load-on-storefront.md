@@ -1,0 +1,68 @@
+---
+title: 상단 탐색 패널이 상점 앞에 로드되지 않음
+description: 이 문서에서는 캐싱에 바니시를 사용하는 경우 특정 페이지의 콘텐츠(일반적으로 상단 탐색 패널)가 상점 전면에 표시되지 않는 ESI(바니시 에지 포함) 문제에 대한 구성 솔루션을 제공합니다.
+exl-id: e7f9b773-1a2d-4c3b-9e1f-a1781fbc898c
+feature: Categories, Site Navigation, Storefront, Variables
+role: Admin
+source-git-commit: 958179e0f3efe08e65ea8b0c4c4e1015e3c5bb76
+workflow-type: tm+mt
+source-wordcount: '319'
+ht-degree: 0%
+
+---
+
+# 상단 탐색 패널이 상점 앞에 로드되지 않음
+
+이 문서에서는 캐싱에 바니시를 사용하는 경우 특정 페이지의 콘텐츠(일반적으로 상단 탐색 패널)가 상점 전면에 표시되지 않는 ESI(바니시 에지 포함) 문제에 대한 구성 솔루션을 제공합니다.
+
+## 영향을 받는 제품 및 버전
+
+* Adobe Commerce 2.X.X
+* 모든 바니시 버전
+
+## 문제
+
+<u>전제 조건</u>:
+
+Adobe Commerce 스토어에 대한 Vannish를 설치하고 구성합니다.
+
+<u>재현 단계</u>:
+
+1. 가게 앞쪽으로 가보세요
+1. 저장소 페이지를 탐색합니다.
+
+<u>예상 결과</u>:
+
+모든 콘텐츠 및 모든 페이지 블록이 성공적으로 로드되었습니다.
+
+<u>실제 결과</u>:
+
+범주가 있는 상단 탐색 패널과 같은 일부 콘텐츠 블록이 로드되지 않습니다. 대신 공백이 표시됩니다.
+
+## 원인
+
+가능한 문제 원인은 다음과 같습니다.
+
+* ESI에는 HTTPS 액세스 프로토콜을 통해 생성되는 태그가 포함되며, Varnish는 HTTP에서만 작동합니다.
+* 바니시는 JSON 내에서 ESI를 처리하지 않습니다.
+* 응답 헤더가 Vannish에 비해 너무 커서 처리할 수 없습니다.
+
+## 솔루션
+
+이 문제를 해결하려면 추가 바니시 구성을 수행한 다음 바니시를 다시 시작해야 합니다.
+
+1. 을 사용하는 사용자로서 `root` 권한은 텍스트 편집기에서 Vanish 구성 파일을 엽니다. 다음을 참조하십시오. [바니시 시스템 구성 수정](https://devdocs.magento.com/guides/v2.3/config-guide/varnish/config-varnish-configure.html#config-varnish-config-sysvcl) 다른 운영 체제에서 이 파일이 있는 위치에 대한 정보를 보려면 개발자 설명서에서 를 참조하십시오.
+1. 다음에서 `DAEMON_OPTS variable`, 추가 `-p feature=+esi_ignore_https`, `-p  feature=+esi_ignore_other_elements`, `-p  feature=+esi_disable_xml_check`. 이는 다음과 같습니다.
+
+   ```bash
+   DAEMON_OPTS="-a :6081 \    -p feature=+esi_ignore_other_elements \    -p feature=+esi_disable_xml_check \    -p feature=+esi_ignore_https \    -T localhost:6082 \    -f /etc/varnish/default.vcl \    -S /etc/varnish/secret \    -s malloc,256m"
+   ```
+
+1. 변경 사항을 저장하고 텍스트 편집기를 종료합니다.
+1. VCL 구성 파일에서 다음 매개 변수의 값을 늘려 응답 헤더를 늘립니다. `http_resp_hdr_len`, `http_resp_size`, `workspace_backend`. 마지막 두 개의 값이 유사한지 확인합니다.
+1. 이 항목을 변경할 때 다음을 실행해야 합니다 `service varnish restart` 변경 사항이 적용됩니다.
+
+## 관련 읽기
+
+* [Vannish 및 웹 서버 구성](https://devdocs.magento.com/guides/v2.3/config-guide/varnish/config-varnish-configure.html#config-varnish-config-sysvcl) 개발자 설명서에서 확인할 수 있습니다.
+* [니스 설명서](https://varnish-cache.org/docs/5.1/reference/index.html)

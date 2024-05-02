@@ -1,0 +1,136 @@
+---
+title: 라이브 검색 카탈로그가 동기화되지 않음
+description: 이 문서에서는 라이브 검색 확장을 사용할 때 카탈로그 데이터가 올바르게 동기화되지 않는 Adobe Commerce 문제에 대한 해결 방법을 제공합니다.
+exl-id: cd2e602f-b2c7-4ecf-874f-ec5f99ae1900
+feature: Catalog Management, Search
+role: Developer
+source-git-commit: a1b049dab989d5d8594d86b64b778e6e277a9f41
+workflow-type: tm+mt
+source-wordcount: '662'
+ht-degree: 0%
+
+---
+
+# 라이브 검색 카탈로그가 동기화되지 않음
+
+이 문서에서는 라이브 검색 확장을 사용할 때 카탈로그 데이터가 올바르게 동기화되지 않는 Adobe Commerce 문제에 대한 해결 방법을 제공합니다.
+
+## 영향을 받는 제품 및 버전
+
+* 라이브 검색 확장이 설치된 Adobe Commerce 2.4.x
+
+## 문제
+
+카탈로그 데이터가 올바르게 동기화되지 않았거나 새 제품이 추가되었지만 검색 결과에 표시되지 않습니다.
+
+<u>재현 단계</u>
+
+1. 에 설명된 대로 Adobe Commerce 인스턴스에 대한 라이브 검색 구성 및 연결 [Live Search 설치 > API 키 구성](https://experienceleague.adobe.com/docs/commerce-merchant-services/live-search/onboard/install.html#configure-api-keys) 사용 설명서에서 참조하십시오.
+1. 30분 후에에 설명된 대로 내보낸 카탈로그 데이터를 확인합니다 [Live Search 설치 > 내보내기 확인](https://experienceleague.adobe.com/docs/commerce-merchant-services/live-search/onboard/install.html#verify-export) 사용 설명서에서 참조하십시오.
+1. 30분 후에에 설명된 대로 연결을 테스트합니다. [Live Search 설치 > 연결 테스트](https://experienceleague.adobe.com/docs/commerce-merchant-services/live-search/onboard/install.html#test-connection) 사용 설명서에서 참조하십시오.
+
+또는
+
+1. 카탈로그에 새 제품을 추가합니다.
+1. 데이터를 백엔드 서비스에 동기화하기 위해 시간 Magento 인덱서 + cron 이 실행된 후 15~20분 후 제품 이름 또는 기타 검색 가능한 속성을 사용하여 검색 쿼리를 실행해 보십시오.
+
+<u>예상 결과</u>
+
+* 내보낸 카탈로그 데이터를 확인할 수 있습니다.
+* 연결 성공
+* 검색 결과에 새 제품이 표시됩니다.
+
+<u>실제 결과</u>
+
+API 키가 변경되어 내보낸 카탈로그를 확인할 수 없거나 연결이 설정되지 않았습니다.
+
+## 솔루션
+
+카탈로그 동기화 문제를 해결하기 위해 시도할 수 있는 몇 가지 방법이 있습니다.
+
+### 변경 사항이 적용될 때까지 대기
+
+구성하고 연결되면 ES(Elasticsearch)의 색인이 만들어지고 검색 결과가 반환되는 데 30분 이상 걸릴 수 있습니다. 이후 일회성 제품 업데이트가 몇 분 안에 색인화될 것으로 예상됩니다.
+
+### 특정 SKU에 대한 제품 데이터 동기화
+
+제품 데이터가 특정 SKU에 대해 올바르게 동기화되지 않는 경우 다음을 수행합니다.
+
+1. 다음 SQL 쿼리를 사용하여 다음에 예상한 데이터가 있는지 확인하십시오. `feed_data` 열. 또한 다음을 기록합니다. `modified_at` 타임스탬프.
+
+   ```sql
+   select * from catalog_data_exporter_products where sku = '<your_sku>' and store_view_code = '<your_ store_view_code>';
+   ```
+
+1. 올바른 데이터가 표시되지 않으면 다음 명령을 사용하여 다시 인덱싱하고 1단계에서 SQL 쿼리를 다시 실행하여 데이터를 확인합니다.
+
+   ```bash
+   bin/magento indexer:reindex catalog_data_exporter_products
+   ```
+
+1. 그래도 올바른 데이터가 표시되지 않으면 [지원 티켓 만들기](/help/help-center-guide/help-center/magento-help-center-user-guide.md#submit-ticket).
+
+### 마지막 제품 내보내기의 타임스탬프 확인
+
+1. 에 올바른 데이터가 표시되면 `catalog_data_exporter_products`을(를) 통해 다음 SQL 쿼리를 사용하여 마지막 내보내기의 타임스탬프를 확인합니다. 다음 이후여야 합니다. `modified_at` 타임스탬프:
+
+   ```sql
+   select * from flag where flag_code = 'products-feed-version';
+   ```
+
+1. 타임스탬프가 오래된 경우 다음 cron 실행이 완료될 때까지 기다리거나 다음 명령을 사용하여 직접 트리거할 수 있습니다.
+
+   ```bash
+   bin/magento cron:run --group=saas_data_exporter
+   ```
+
+1. 대기 `<>` 시간(증분 업데이트 시간). 데이터가 여전히 표시되지 않으면 [지원 티켓 만들기](/help/help-center-guide/help-center/magento-help-center-user-guide.md#submit-ticket).
+
+### 특정 속성 코드 동기화
+
+제품 속성 데이터가 특정 속성 코드에 대해 올바르게 동기화되지 않는 경우 다음을 수행합니다.
+
+1. 다음 SQL 쿼리를 사용하여 다음에 예상한 데이터가 있는지 확인하십시오. `feed_data` 열. 또한 다음을 기록합니다. `modified_at` 타임스탬프.
+
+   ```sql
+   select * from catalog_data_exporter_product_attributes where json_extract(feed_data, '$.attributeCode') = '<your_attribute_code>' and store_view_code = '<your_ store_view_code>';
+   ```
+
+1. 올바른 데이터가 표시되지 않으면 다음 명령을 사용하여 인덱스를 다시 만든 다음 1단계에서 SQL 쿼리를 다시 실행하여 데이터를 확인합니다.
+
+   ```bash
+   bin/magento indexer:reindex catalog_data_exporter_product_attributes
+   ```
+
+1. 그래도 올바른 데이터가 표시되지 않으면 [지원 티켓 만들기](/help/help-center-guide/help-center/magento-help-center-user-guide.md#submit-ticket).
+
+### 마지막 제품 속성 내보내기의 타임스탬프 확인
+
+에 올바른 데이터가 표시되면 `catalog_data_exporter_product_attributes`:
+
+1. 다음 SQL 쿼리를 사용하여 마지막 내보내기의 타임스탬프를 확인하십시오. 다음 이후여야 합니다. `modified_at` 타임스탬프.
+
+   ```sql
+   select * from flag where flag_code = 'product-attributes-feed-version';
+   ```
+
+1. 타임스탬프가 오래된 경우 다음 cron 실행이 완료될 때까지 기다리거나 다음 명령을 사용하여 직접 트리거할 수 있습니다.
+
+   ```bash
+   bin/magento cron:run --group=saas_data_exporter
+   ```
+
+1. 15~20분 동안(증분 업데이트 시간) 기다립니다. 데이터가 여전히 표시되지 않으면 다음을 수행하십시오. [지원 티켓 만들기](/help/help-center-guide/help-center/magento-help-center-user-guide.md#submit-ticket).
+
+### API 구성 변경 후 동기화
+
+(알려진 문제) API 구성을 변경하여 데이터 공간 ID가 변경되고 카탈로그 변경 사항이 더 이상 동기화되지 않는 경우 다음 명령을 실행합니다.
+
+```bash
+bin/magento saas:resync --feed products
+bin/magento saas:resync --feed productattributes
+```
+
+## 관련 읽기
+
+다음을 참조하십시오 [Live Search 온보드](https://experienceleague.adobe.com/docs/commerce-merchant-services/live-search/onboard/onboarding-overview.html) 사용 설명서에서 참조하십시오.
