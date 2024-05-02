@@ -2,9 +2,9 @@
 user-guide-title: Adobe Commerce 기술 자료
 user-guide-description: Commerce 스토어와 관련된 문제를 해결하고 유지 관리하는 데 필요한 모든 것을 제공합니다.
 breadcrumb-title: Commerce KB
-source-git-commit: 2db8eeb5bbe473db895bc092462b77de39af3e6d
+source-git-commit: 59671ff01a398ad8dc525c8948b5dc5548774cf5
 workflow-type: tm+mt
-source-wordcount: '10975'
+source-wordcount: '10989'
 ht-degree: 0%
 
 ---
@@ -797,6 +797,7 @@ ht-degree: 0%
          * [ACSD-57394: 의 여러 정렬 필드를 기준으로 한 잘못된 제품 정렬 [!DNL GraphQL]](/help/support-tools/patches-available-in-qpt-tool/v1-1-48/acsd-57394-incorrect-product-sorting-by-multiple-sort-fields-in-graphql.md)
          * [ACSD-56546: 구성 및 번들 제품이 상점 앞에 품절로 표시됨](/help/support-tools/patches-available-in-qpt-tool/v1-1-48/acsd-56546-configurable-and-bundle-products-display-as-out-of-stock-on-the-storefront.md)
          * [ACSD-55566: [!UICONTROL mergeCart] 에서 내부 서버 오류로 인해 돌연변이가 실패합니다. [!DNL GraphQL] 응답](/help/support-tools/patches-available-in-qpt-tool/v1-1-48/acsd-55566-mergecart-mutation-fails-with-an-internal-server-error-in-graphql-response.md)
+         * [ACSD-58008: 종료 날짜를 비어 있는 것으로 편집하면 일정 업데이트가 사라짐](/help/support-tools/patches-available-in-qpt-tool/v1-1-48/acsd-58008-editing-the-end-date-as-empty-causes-the-schedule-update-to-disappear.md)
          * [ACSD-57854: GraphQL 응답에 범주 집계에 나열할 수 없는 비활성화된 범주가 포함되어 있습니다.](/help/support-tools/patches-available-in-qpt-tool/v1-1-48/acsd-57854-graphql-response-contains-disabled-categories-that-should-not-be-listed-in-the-category-aggregations.md)
          * [ACSD-57565: 주문 대시보드에 잘못된 주문 정보가 표시됨](/help/support-tools/patches-available-in-qpt-tool/v1-1-48/acsd-57565-the-order-dashboard-displays-incorrect-order-information.md)
       * [품질 패치 도구로 Adobe Commerce 패치 문제 확인](/help/support-tools/patches-available-in-qpt-tool/check-patch-for-magento-issue-with-magento-quality-patches.md)
