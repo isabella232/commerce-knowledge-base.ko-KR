@@ -2,9 +2,9 @@
 user-guide-title: Adobe Commerce 기술 자료
 user-guide-description: Commerce 스토어와 관련된 문제를 해결하고 유지 관리하는 데 필요한 모든 것을 제공합니다.
 breadcrumb-title: Commerce KB
-source-git-commit: 59671ff01a398ad8dc525c8948b5dc5548774cf5
+source-git-commit: 0cb8c7c2e09a5abb97d6c0ba4193826152606546
 workflow-type: tm+mt
-source-wordcount: '10989'
+source-wordcount: '10999'
 ht-degree: 0%
 
 ---
@@ -796,6 +796,7 @@ ht-degree: 0%
          * [ACSD-57337: 액세스 제한이 있는 관리 사용자가 회사를 볼 수 있음](/help/support-tools/patches-available-in-qpt-tool/v1-1-48/acsd-57337-admin-user-with-access-restrictions-can-see-companies.md)
          * [ACSD-57394: 의 여러 정렬 필드를 기준으로 한 잘못된 제품 정렬 [!DNL GraphQL]](/help/support-tools/patches-available-in-qpt-tool/v1-1-48/acsd-57394-incorrect-product-sorting-by-multiple-sort-fields-in-graphql.md)
          * [ACSD-56546: 구성 및 번들 제품이 상점 앞에 품절로 표시됨](/help/support-tools/patches-available-in-qpt-tool/v1-1-48/acsd-56546-configurable-and-bundle-products-display-as-out-of-stock-on-the-storefront.md)
+         * [ACSD-56741: 사용자 지정 MySQL 트리거로 데이터베이스 설정 오류 문제 해결](/help/support-tools/patches-available-in-qpt-tool/v1-1-48/acsd-56741-database-setup-upgrade-error-with-custom-mysql-trigger.md)
          * [ACSD-55566: [!UICONTROL mergeCart] 에서 내부 서버 오류로 인해 돌연변이가 실패합니다. [!DNL GraphQL] 응답](/help/support-tools/patches-available-in-qpt-tool/v1-1-48/acsd-55566-mergecart-mutation-fails-with-an-internal-server-error-in-graphql-response.md)
          * [ACSD-58008: 종료 날짜를 비어 있는 것으로 편집하면 일정 업데이트가 사라짐](/help/support-tools/patches-available-in-qpt-tool/v1-1-48/acsd-58008-editing-the-end-date-as-empty-causes-the-schedule-update-to-disappear.md)
          * [ACSD-57854: GraphQL 응답에 범주 집계에 나열할 수 없는 비활성화된 범주가 포함되어 있습니다.](/help/support-tools/patches-available-in-qpt-tool/v1-1-48/acsd-57854-graphql-response-contains-disabled-categories-that-should-not-be-listed-in-the-category-aggregations.md)
