@@ -2,9 +2,9 @@
 user-guide-title: Adobe Commerce 기술 자료
 user-guide-description: Commerce 스토어와 관련된 문제를 해결하고 유지 관리하는 데 필요한 모든 것을 제공합니다.
 breadcrumb-title: Commerce KB
-source-git-commit: cd3101c325a6e33b4a4b56e6f2494011cdba56d8
+source-git-commit: c4c2ae504a5ecd699ab2fa92c07edb0d0942fd76
 workflow-type: tm+mt
-source-wordcount: '10949'
+source-wordcount: '10961'
 ht-degree: 0%
 
 ---
@@ -791,6 +791,7 @@ ht-degree: 0%
          * [ACSD-56858: B2B 회사 관리자의 역할 권한 불일치](/help/support-tools/patches-available-in-qpt-tool/v1-1-47/acsd-56858-role-permissions-display-issue-in-b2b-company-admin-panel.md)
       * v1.1.48 {#v1-1-48}
          * [개요: [!DNL Quality Patches Tool] (QPT) v1.1.48](/help/support-tools/patches-available-in-qpt-tool/v1-1-48/overview.md)
+         * [ACSD-56635: 계정 공유가 로 설정되면 가져온 고객이 복제됨 [!DNL Global]](/help/support-tools/patches-available-in-qpt-tool/v1-1-48/acsd-56635-imported-customers-are-duplicated-with-the-same-email-address.md)
          * [ACSD-57337: 액세스 제한이 있는 관리 사용자가 회사를 볼 수 있음](/help/support-tools/patches-available-in-qpt-tool/v1-1-48/acsd-57337-admin-user-with-access-restrictions-can-see-companies.md)
          * [ACSD-57394: 의 여러 정렬 필드를 기준으로 한 잘못된 제품 정렬 [!DNL GraphQL]](/help/support-tools/patches-available-in-qpt-tool/v1-1-48/acsd-57394-incorrect-product-sorting-by-multiple-sort-fields-in-graphql.md)
          * [ACSD-56546: 구성 및 번들 제품이 상점 앞에 품절로 표시됨](/help/support-tools/patches-available-in-qpt-tool/v1-1-48/acsd-56546-configurable-and-bundle-products-display-as-out-of-stock-on-the-storefront.md)
