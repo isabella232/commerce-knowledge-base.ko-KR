@@ -3,9 +3,9 @@ title: 클라우드 인프라에서 Adobe Commerce의 환경 재설정
 description: 이 문서에서는 클라우드 인프라에서 Adobe Commerce의 환경을 롤백하는 다양한 시나리오를 보여 줍니다.
 exl-id: e6b27838-ca1e-415f-a098-2aa2576e3f20
 feature: Best Practices, Build, Cloud, Console
-source-git-commit: ddde2385f1d94194b34e9ed51f6cbda55c916d90
+source-git-commit: f2aeb0262ddcb3d7e78028d08b9323db243fc96b
 workflow-type: tm+mt
-source-wordcount: '1087'
+source-wordcount: '1083'
 ht-degree: 0%
 
 ---
@@ -156,8 +156,8 @@ git commit --allow-empty -m "<message>" && git push <origin> <branch>
 
 1. [환경에 SSH 추가](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/secure-connections.html).
 1. MySQL DB에 연결: `mysql -h database.internal` Pro 환경의 경우 다음을 참조하십시오. [MySQL 서비스 설정](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/service/mysql.html)).
-1. \`main\` DB 를 삭제합니다. `drop database main;`
-1. 빈 \`main\` DB 만들기: `create database main;`
+1. 드롭하기 `main` DB : `drop database main;`
+1. 빈 항목 만들기 `main` 데이터베이스: `create database main;`
 1. 다음 구성 파일을 삭제합니다. `config.php` , `config.php` , `.bak,` , `env.php`, `env.php.bak`
 
 DB를 재설정한 후 [만들기 [!DNL git] 환경에 푸시하여 재배포 트리거](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/deployment/examples/example-using-cli.html) 새로 만든 DB에 Adobe Commerce을 설치합니다. 또는 [redeploy 명령 실행](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/dev-tools/cloud-cli.html#environment-commands).
