@@ -3,9 +3,9 @@ title: '클라우드에서 백업(스냅샷): FAQ'
 description: 이 문서에서는 클라우드 인프라의 Adobe Commerce에서 스냅샷을 사용하여 환경을 백업하는 데 필요한 필수 사항을 다룹니다.
 exl-id: 0077db74-3e7e-4c98-b215-7f6c089f49e8
 feature: Cloud, Iaas
-source-git-commit: 9491279d147eac9ed36ad236c227b08e7c6e0211
+source-git-commit: 0958a8923e27c1341f4b536812b26205685b2b81
 workflow-type: tm+mt
-source-wordcount: '549'
+source-wordcount: '550'
 ht-degree: 0%
 
 ---
@@ -57,7 +57,7 @@ ht-degree: 0%
 
 ## 환경 스냅샷 복원
 
-지원되는 환경(통합, 스테이징, 프로덕션의 프로덕션 계획 또는 프로의 통합 계획)에서 기존 스냅샷을 복원하려면 다음 단계를 수행합니다. [백업 관리: 수동 백업 복원](/docs/commerce-cloud-service/user-guide/develop/storage/snapshots#restore-a-manual-backup) Commerce on Cloud Infrastructure Guide를 참조하십시오.
+지원되는 환경(통합, 스테이징, 프로덕션의 프로덕션 계획 또는 프로의 통합 계획)에서 기존 스냅샷을 복원하려면 다음 단계를 수행합니다. [백업 관리: 수동 백업 복원](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/develop/storage/snapshots#restore-a-manual-backup) Commerce on Cloud Infrastructure Guide를 참조하십시오.
 
 ## 데이터베이스(DB) 백업
 
