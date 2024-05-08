@@ -3,9 +3,9 @@ title: 새 설정 체크리스트 [!DNL domain]
 description: 다음은 신규 설정 방법에 대한 체크리스트입니다 [!DNL domain] Adobe Commerce on cloud infrastructure.
 exl-id: bfe0582d-2c6d-4814-908f-dfd8c898bef7
 feature: Cache
-source-git-commit: cc3dc1e3f9c8f98370ce5db125b402d4c1dfbd6f
+source-git-commit: 625ed2c7ab79f7bca9a979903e97c44c875e607c
 workflow-type: tm+mt
-source-wordcount: '284'
+source-wordcount: '418'
 ht-degree: 0%
 
 ---
@@ -33,8 +33,13 @@ ht-degree: 0%
 >[!NOTE]
 >
 >새 을(를) 추가할 수 있습니다 [!DNL domain] 끝 [!DNL Fastly] 에서 구성을 업데이트하여 직접 [!DNL Admin] 위치: **[!UICONTROL Stores]** > **[!UICONTROL Configuration]** > **[!UICONTROL Advanced]** > **[!UICONTROL System]** > **[!UICONTROL Full Page Cache]** > **[!DNL Fastly Configuration]** > **[!UICONTROL Domains]** 에서와 같이 [[!DNL Manage domains]](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/cdn/setup-fastly/fastly-custom-cache-configuration.html#manage-domains) 사용 안내서에서 참조하십시오.
+>
+>도메인을 추가할 수 없는 경우 다음 이유 중 하나가 원인일 수 있습니다.
+>
+>1. 도메인을 자체 구성된 클라우드 환경으로 마이그레이션하고 있습니다 [!DNL Fastly] 서비스. 이 경우 요청을 제출하고 도메인의 위임을 요청합니다.
+>1. 도메인을 Starter에서 Pro로 마이그레이션하고 있습니다. 이 경우 추가 지원 요청을 제출합니다.
 
-* **[!DNL Starter]**: [!DNL Custom domains] 은(는) 지원되지 않습니다.
+* **[!DNL Starter]**: [!DNL Custom domains] 는 스테이징 환경에서 지원되지 않습니다.
 
 ### 3단계 - [!DNL Production environment]: 을(를) 진행 중입니다. [!DNL Pro] 또는 [!DNL Starter]?
 
@@ -43,6 +48,12 @@ ht-degree: 0%
 >[!NOTE]
 >
 >새 을(를) 추가할 수 있습니다 [!DNL domain] 끝 [!DNL Fastly] 에서 구성을 업데이트하여 직접 [!DNL Admin] 위치: **[!UICONTROL Stores]** > **[!UICONTROL Configuration]** > **[!UICONTROL Advanced]** > **[!UICONTROL System]** > **[!UICONTROL Full Page Cache]** > **[!DNL Fastly Configuration]** > **[!UICONTROL Domains]** [[!DNL Manage domains]](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/cdn/setup-fastly/fastly-custom-cache-configuration.html#manage-domains) 사용 안내서에서 참조하십시오.
+>
+>
+>도메인을 추가할 수 없는 경우 다음 이유 중 하나가 원인일 수 있습니다.
+>
+>1. 도메인을 온-프레미스에서 자체 구성된 클라우드 환경으로 마이그레이션하고 있습니다. [!DNL Fastly] 서비스. 이 경우 요청을 제출하고 도메인의 위임을 요청합니다.
+>1. 도메인을 Starter에서 Pro로 마이그레이션하고 있습니다. 이 경우 추가 지원 요청을 제출합니다.
 
 * **[!DNL Starter]**: 를 추가합니다. [!DNL domain] 을(를) 의 프로젝트에 **[!DNL Domains]** 탭을 선택한 다음 **요청 제출** 을(를) 제공하려면 **[!DNL ACME Challenge Key]** 대상: [!DNL SSL certificate].
 
