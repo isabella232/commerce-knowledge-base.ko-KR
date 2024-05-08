@@ -4,9 +4,9 @@ description: 이 문서에서는 Commerce 관리자의 .csv 파일로 제품을 
 exl-id: 8e3bb65c-ea75-4af4-ad4b-4d94ab219bbb
 feature: Cache, Data Import/Export, Products, Variables
 role: Developer
-source-git-commit: 465eb89cf5c5169b0b459ab7e6bdcbd418781093
+source-git-commit: d55702ab97f3770d0ec71322f6c24448f0169ad4
 workflow-type: tm+mt
-source-wordcount: '527'
+source-wordcount: '578'
 ht-degree: 0%
 
 ---
@@ -92,6 +92,10 @@ Adobe Commerce 애플리케이션 부품 버전 2.3.2의 내보내기 기능에 
 >[!NOTE]
 >
 >찾을 수 없는 경우 `.magento.env.yaml` 환경에 대한 파일이며 삭제되었다고 생각되는 경우 새 파일을 만들어야 합니다 `.magento.env.yaml`. 처음에는 비어 있을 수 있으므로 필요에 따라 정보를 추가할 수 있습니다. 다음 문서를 참조하십시오. [배포를 위한 환경 변수 구성](/docs/commerce-cloud-service/user-guide/configure/env/configure-env-yaml.html) 및 [환경 변수](/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-intro.html) 개발자 설명서에서 확인할 수 있습니다.
+
+>[!TIP]
+>
+>[YAML 파일](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/configure-env-yaml.html) 은 대/소문자를 구분하며 탭을 허용하지 않습니다. .magento.env.yaml 파일 전체에서 일관된 들여쓰기를 사용해야 합니다. 그렇지 않으면 구성이 예상대로 작동하지 않을 수 있습니다. 설명서와 샘플 파일의 예제에서는 두 개의 공백 들여쓰기를 사용합니다. ece-tools validate 명령을 사용하여 구성을 확인합니다.
 
 >[!NOTE]
 >
