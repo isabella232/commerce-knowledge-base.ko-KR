@@ -2,9 +2,9 @@
 user-guide-title: Adobe Commerce 기술 자료
 user-guide-description: Commerce 스토어와 관련된 문제를 해결하고 유지 관리하는 데 필요한 모든 것을 제공합니다.
 breadcrumb-title: Commerce KB
-source-git-commit: 0cb8c7c2e09a5abb97d6c0ba4193826152606546
+source-git-commit: cdfcfbb1c6b91eb06bb028179676d022a1e27000
 workflow-type: tm+mt
-source-wordcount: '10999'
+source-wordcount: '11006'
 ht-degree: 0%
 
 ---
@@ -1253,6 +1253,7 @@ ht-degree: 0%
    * [필드가 회색으로 표시되는 경우 magento.com 계정의 이메일 주소를 변경하는 방법](/help/how-to/general/change-email-address-on-magento-account.md)
    * [Magento Order Management 제거 방법](/help/how-to/general/how-to-remove-mom.md)
    * [Commerce 휴일 준비를 위한 기술 팁](/help/how-to/general/tech-tips-for-commerce-holiday-readiness.md)
+   * [GraphQL 요청에 대해 WAF를 우회하는 방법](/help/how-to/general/how-to-bypass-waf-for-graphql-requests.md)
 * FAQ {#faq}
    * [FAQ 개요](/help/faq/overview.md)
    * [Fastly에서 제공하는 WAF(웹 애플리케이션 방화벽): FAQ](/help/faq/general/web-application-firewall-waf-powered-by-fastly-the-faq.md)
