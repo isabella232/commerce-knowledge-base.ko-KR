@@ -1,19 +1,19 @@
 ---
 title: Cloud UI에 "로그 스니핑" 오류가 있는 경우 배포 로그 확인
-description: 이 문서에서는 배포 로그를 보려고 할 때 너무 길어서* 클라우드 인프라 UI의 Adobe Commerce에 *로그가 잘린* 오류 메시지가 표시되는 문제에 대한 해결 방법을 제공합니다.
+description: 이 문서에서는 클라우드 프로젝트 UI에서 배포 로그를 보려고 할 때 너무 길어서* 클라우드 인프라 UI의 Adobe Commerce에 *로그가 잘린* 오류 메시지가 표시되는 문제에 대한 해결 방법을 제공합니다.
 exl-id: 04d28741-72c1-4722-be46-425fe136b9a6
 feature: Cloud, Deploy, Logs, Paas
 role: Developer
-source-git-commit: 958179e0f3efe08e65ea8b0c4c4e1015e3c5bb76
+source-git-commit: 71bec5b99063d771982f6dcab111b9e5a4aaec69
 workflow-type: tm+mt
-source-wordcount: '301'
+source-wordcount: '328'
 ht-degree: 0%
 
 ---
 
-# Cloud UI에 &quot;로그 스니핑&quot; 오류가 있는 경우 배포 로그 확인
+# 클라우드 UI에 이 있는 경우 배포 로그 확인 *로그 잘림* 오류
 
-이 문서에서는 클라우드 인프라 UI의 Adobe Commerce에 *너무 길어서 로그가 잘렸습니다.* 배포 로그를 보려고 할 때 오류 메시지가 표시됩니다.
+이 문서에서는 클라우드 인프라 UI의 Adobe Commerce에 표시되는 문제에 대한 솔루션을 제공합니다. *너무 길어서 로그가 잘렸습니다.* cloud project UI에서 배포 로그를 보려고 할 때 오류 메시지가 표시됩니다. (에는 적용되지 않음 [Adobe Commerce Cloud 콘솔](https://console.adobecommerce.com/).)
 
 ## 영향을 받는 제품
 
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 ## 문제
 
-배포 로그를 보려고 하면 클라우드 인프라 UI의 Adobe Commerce에 다음 오류 메시지가 표시됩니다. *너무 길어서 로그가 잘렸습니다.*.
+클라우드 프로젝트 UI에서 배포 로그를 보려고 하면 클라우드 인프라 UI의 Adobe Commerce에 다음 오류 메시지가 표시됩니다. *너무 길어서 로그가 잘렸습니다.*.
 
 ## 재현 단계
 
