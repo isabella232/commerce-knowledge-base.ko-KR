@@ -1,11 +1,12 @@
 ---
-title: "env:COMPOSER_AUTH 또는 auth.json에 올바른 액세스 키가 있으면 배포가 실패합니다."
+title: env:COMPOSER_AUTH 또는 auth.json에 올바른 액세스 키가 있어 배포가 실패합니다.
 description: 이 문서에서는 "https://repo.magento.com/archives/magento/module-customer-balance/magento-module-customer-balance-100.4.0.0.zip 파일을 다운로드할 수 없음(HTTP/1.1 404 찾을 수 없음)" 오류와 함께 배포가 실패하는 경우 발생하는 문제에 대한 해결 방법을 제공합니다.
 feature: Deploy
 role: Admin
-source-git-commit: 8e0aca8f528b017e288ae6fb19b072a5cc04761b
+exl-id: a18f4213-7381-4001-a5a0-3f8db4525469
+source-git-commit: 54ef4e95cf0e3f5822ff5e5c566129fab331f784
 workflow-type: tm+mt
-source-wordcount: '243'
+source-wordcount: '244'
 ht-degree: 0%
 
 ---
@@ -58,4 +59,4 @@ W:   The "https://repo.magento.com/archives/magento/module-customer-balance/mage
 ## 관련 읽기
 
 * [클라우드 저장소의 Adobe Commerce에 액세스할 수 없습니다. 배포 시 403 금지됨 또는 404 찾을 수 없음 오류](/docs/commerce-knowledge-base/kb/troubleshooting/deployment/magento-commerce-cloud-repo-could-not-be-accessed-403-forbidden-or-404-not-found-error-when-deploying.html)
-* [배포 오류: 다운로드 중 오류 7.. 포트 443: 연결이 거부되었습니다.](/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/deployment-error-downloading-connection-refused-adobe-commerce.html)
+* [배포 오류: 다운로드 중 오류 7.. 포트 443: 연결이 거부되었습니다.](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/deployment/deployment-error-downloading-connection-refused-adobe-commerce)
