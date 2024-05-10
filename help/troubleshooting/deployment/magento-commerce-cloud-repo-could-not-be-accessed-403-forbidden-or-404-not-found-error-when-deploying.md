@@ -4,9 +4,9 @@ description: '이 문서에서는 다음과 유사한 클라우드 인프라의 
 exl-id: 2f72d80a-05b2-4908-8fa8-61d06885ed07
 feature: Cloud, Deploy, Paas, Variables
 role: Developer
-source-git-commit: 958179e0f3efe08e65ea8b0c4c4e1015e3c5bb76
+source-git-commit: 9ca95444aa785191e4c8bf1603773f3430414797
 workflow-type: tm+mt
-source-wordcount: '596'
+source-wordcount: '608'
 ht-degree: 0%
 
 ---
@@ -59,7 +59,7 @@ ht-degree: 0%
 다음 단계를 수행하여 인증 키 문제를 해결하십시오(각 단계에 대한 자세한 내용은 아래 섹션 참조).
 
 1. 유효한 인증 키를 얻습니다(키가 유효하다고 확신하는 경우 건너뛰십시오).
-1. 에 키 값 추가 `env:COMPOSER_AUTH` 변수(또는 올바른 값이 있는지 확인)를 시작하고 키가 변수에서 일관되게 지정되었는지 확인합니다. `auth.json` 프로젝트 루트에 있는 파일입니다.
+1. 에 키 값 추가 `env:COMPOSER_AUTH` 변수(또는 올바른 값이 있는지 확인)를 확인하고 프로젝트 수준 및 환경 수준의 변수에 키가 일관되게 지정되었는지 확인합니다. `auth.json` 프로젝트 루트에 있는 파일(있는 경우)입니다.
 1. 업데이트 또는 삭제 `auth.json`인증 키 값이 지정되지 않았거나 다른 값이 있는 경우 키가 구성되는 단일 위치를 갖도록.
 
 ### 1. 유효한 인증 키 얻기
