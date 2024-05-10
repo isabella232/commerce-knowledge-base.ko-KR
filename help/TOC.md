@@ -2,9 +2,9 @@
 user-guide-title: Adobe Commerce 기술 자료
 user-guide-description: Commerce 스토어와 관련된 문제를 해결하고 유지 관리하는 데 필요한 모든 것을 제공합니다.
 breadcrumb-title: Commerce KB
-source-git-commit: 76be98e46941bc6a7857aba8e95c8415ce3fc978
+source-git-commit: 5e20e9d150eb8a527e530a19abd8b364f55a5aa6
 workflow-type: tm+mt
-source-wordcount: '11017'
+source-wordcount: '11013'
 ht-degree: 0%
 
 ---
@@ -1035,7 +1035,6 @@ ht-degree: 0%
       * [Github 토큰 문제 및 작성기 주요 절차](/help/troubleshooting/miscellaneous/github-token-issue-and-composer-key-procedures.md)
       * [Adobe Commerce 2.4.1 문제: Chrome에서 Amazon 계정을 변경할 수 없음](/help/troubleshooting/miscellaneous/magento-2-4-1-known-issue-unable-to-change-amazon-account-in-google-chrome.md)
       * [ECE-Tools 및 패치 업데이트 오류 Adobe Commerce cloud infrastructure 2.2.x., 2.3.x](/help/troubleshooting/miscellaneous/ece-tools-and-patch-update-errors-magento-commerce-cloud-2-2-x-2-3-x.md)
-      * [빠른 체크아웃 문제 해결](/help/troubleshooting/miscellaneous/quick-checkout-issues.md)
       * [PWA Studio: 컴파일을 시작하기 전에 Webpack이 중단됨](/help/troubleshooting/miscellaneous/pwa-studio-webpack-hangs-before-beginning-compilation.md)
       * [Adobe Commerce Redis 문제 해결을 위한 최신 패치 설치](/help/troubleshooting/miscellaneous/install-latest-patches-to-fix-magento-redis-issues.md)
       * [잘못된 오프셋 오류 해결](/help/troubleshooting/miscellaneous/resolve-an-illegal-offset-error.md)
