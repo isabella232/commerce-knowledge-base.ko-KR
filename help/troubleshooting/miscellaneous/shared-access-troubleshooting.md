@@ -4,9 +4,9 @@ description: '**문제:** 신뢰할 수 있는 동료에게 공유 액세스 권
 exl-id: 9e03c031-2359-42a6-9de4-943451a16456
 feature: Cache
 role: Developer
-source-git-commit: 1d2e0c1b4a8e3d79a362500ee3ec7bde84a6ce0d
+source-git-commit: e77322c04c7245538c10dfb397094eee6cfe6be9
 workflow-type: tm+mt
-source-wordcount: '403'
+source-wordcount: '500'
 ht-degree: 0%
 
 ---
@@ -39,6 +39,19 @@ ht-degree: 0%
 1. 특정 리소스가 누락된 경우 계정 소유자(기본 계정 소유자)에게 문의하십시오.
 
 문제가 계속 발생하면 Adobe 계정 팀에 문의하거나 grp-Magento-HelpCenterLoginIssues@adobe.com으로 이메일을 보내십시오. 이름과 계정과 연결된 이메일을 지정하십시오.
+
+## 공유 액세스를 사용했으며 을(를) 클릭함 [!UICONTROL Support], 하지만 새 티켓을 열면 [!UICONTROL Organization] 드롭다운이 표시되지 않음
+
+**문제:** 공유 액세스 계정으로 전환했지만 **[!UICONTROL Support tab]** (예)
+
+**가능한 원인:** 계정에 있는 한 판매자에 대한 공유 액세스 권한만 부여되었습니다.
+
+**해결 방법:**
+
+1. 다음으로 다시 전환 **[!UICONTROL My Account]**.
+1. 하나만 나열되는 경우 **[!UICONTROL Shared Name]**, 다음과 같습니다. *기본 조직* 티켓이 아래에 열린다는 뜻입니다.
+
+문제가 계속 발생하면 Adobe 계정 팀에 문의하거나 grp-Magento-HelpCenterLoginIssues@adobe.com으로 이메일을 보내십시오. 이름과 계정과 연결된 이메일을 지정합니다.
 
 ## 공유 액세스를 사용했지만 공유 액세스 대신 내 티켓이 표시됩니다.
 

@@ -2,9 +2,9 @@
 title: "[!DNL Fastly] 원본 클로킹 지원 FAQ"
 description: 이 FAQ에서는 다음에 대한 일반적인 질문에 대해 설명합니다. [!DNL Fastly] Adobe Commerce(2021년부터 완전히 구현됨)의 원본 클로킹 지원.
 exl-id: d608abe7-7d64-44ce-bea1-34b201c29113
-source-git-commit: 348a1f6e455aff9ad7c562ea20c95f27c9ee0b86
+source-git-commit: 1021a1ab81481f92e850bd49330f1742fe9a21f2
 workflow-type: tm+mt
-source-wordcount: '320'
+source-wordcount: '305'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 0%
 
 ## 내 프로젝트에 대해 원본 차단 활성화를 요청해야 합니까?
 
-아니. 이 기능은 모든 클라우드 프로젝트에서 이미 구현했어야 하며, 2021년 이후 프로비저닝된 모든 프로젝트는 기본적으로 이를 활성화했을 것입니다. 그러나 다음 방법으로 프로젝트에 대해 원천 숨김을 비활성화하도록 요청할 수 있습니다. [지원 요청 제출](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket).
+아니. 이 기능은 모든 클라우드 프로젝트에서 이미 구현했어야 하며, 2021년 이후 프로비저닝된 모든 프로젝트는 기본적으로 이를 활성화했을 것입니다.
 
 ## 원본 클로킹이 보내는 IP 주소를 변경합니까?
 
@@ -37,8 +37,22 @@ ht-degree: 0%
 
 [!DNL Fastly] 는 API 호출을 캐시하지 않으므로 클라이언트는 변경 사항이 적합해야 합니다. 원본 클로킹은 다음과 같이 원본으로 직접 이동하는 요청만 차단합니다.
 
+* 프로덕션
+
 ```php
 mywebsite.com.c.abcdefghijkl.ent.magento.cloud
+```
+
+* 스테이징
+
+```php
+mcstaging2.mywebsite.com.c.abcdefghijkl.dev.ent.magento.cloud
+```
+
+* StagingX
+
+```php
+mcstagingX.mywebsite.com.c.abcdefghijkl.X.dev.ent.magento.cloud
 ```
 
 이 예에서 URL을 로 변경하면 클라이언트는 여전히 API를 히트할 수 있습니다. ``mywebsite.com``:
