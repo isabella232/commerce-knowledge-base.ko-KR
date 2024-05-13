@@ -1,11 +1,11 @@
 ---
 title: 클라우드에서 통합 환경을 위한 디스크 공간 증가
-description: 개발자 설명서에서 [디스크 공간 관리](https://devdocs.magento.com/guides/v2.3/cloud/project/manage-disk-space.html)를 참조하십시오.
+description: Commerce on Cloud Infrastructure 안내서의 [디스크 공간 관리](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/develop/storage/manage-disk-space)를 참조하십시오.
 exl-id: 92c09e05-6e7f-4633-8b84-e3806a0224e0
 feature: Cloud, Integration
-source-git-commit: cd3789526767b041cbdb218a23c509211767ac87
+source-git-commit: b6233510d3836a98dd3e49ed2c4061297e36f3c0
 workflow-type: tm+mt
-source-wordcount: '41'
+source-wordcount: '44'
 ht-degree: 0%
 
 ---
