@@ -3,9 +3,9 @@ title: Adobe Commerce 도움말 센터 사용 안내서
 description: Adobe Commerce 도움말 센터에 지원 티켓을 제출하고, 계정에 대한 공유 액세스를 제공하고, Adobe Commerce 기술 자료를 탐색하는 방법에 대해 알아봅니다.
 exl-id: 9eb4814f-c9c4-4dd0-b68a-87d712898aa5
 feature: Support, Roles/Permissions, Tools and External Services, Admin Workspace, Iaas, Marketing Tools
-source-git-commit: a2e68f63a53013b6f0b8bfa12838fafe2bb6e6c7
+source-git-commit: 4e8833d100b776ca3c66a96274cde2d68eb0fd10
 workflow-type: tm+mt
-source-wordcount: '3924'
+source-wordcount: '3993'
 ht-degree: 0%
 
 ---
@@ -231,6 +231,10 @@ Adobe Commerce 라이선스가 있는 계정에 대한 공유 액세스 권한�
 1. 에 로그인 [magento.com 웹 사이트의 Magento 계정](https://account.magento.com/).
 1. 다음에서 **계정 전환** 오른쪽 상단의 드롭다운 필드에서 공유 액세스 계정을 선택합니다.
 1. 을(를) 클릭합니다 **지원** 왼쪽 패널의 탭입니다. 이렇게 하면 Magento.com에서 Adobe Commerce 도움말 센터로의 SSO 호출을 통해 Adobe Commerce 도움말 센터가 제대로 구성되게 됩니다.
+
+이 작업을 이미 수행한 경우 권한이 부여되었는지 확인합니다. *두 명 이상의 판매자로부터 액세스 공유* 을(를) 클릭하여 [[!UICONTROL Shared with me] 계정의 탭](https://account.magento.com/grantor/manage/shared/):
+* 하나만 [!UICONTROL Share Name] 목록에 있습니다. 즉, 한 상인에게만 부여됩니다. *이(가) 표시되지 않습니다. [!UICONTROL Organization] 드롭다운*.
+* 여러 개 있는 경우 [!UICONTROL Share Names], 판매자의 지원 권한은 지불 문제로 인해 이전에 라이선스가 취소되어 만료되었을 수 있습니다.
 
 ### 티켓 추적 {#track-tickets}
 
