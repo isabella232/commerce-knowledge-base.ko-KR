@@ -4,9 +4,9 @@ description: 성수기(약 11월 중순부터 1월 중순) 동안 Adobe은 클�
 exl-id: 9d6910bf-30bc-4117-bf7f-a0316f9506b5
 feature: Cloud, Paas
 role: Admin
-source-git-commit: dfd3f788f42677b631ffb5b3153a1c79c2cc1ca3
+source-git-commit: 357e0acb1c849079ff0fe9f53fe386f60475c7f9
 workflow-type: tm+mt
-source-wordcount: '449'
+source-wordcount: '446'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 **업사이징 내역 보기**
 
-에서 요청된 크기 조정 내역을 볼 수 있습니다. [프로젝트 포털 (온보딩 UI)](https://devdocs.magento.com/cloud/onboarding/onboarding-tasks.html), 아래 **프로젝트** > **서비스** > **CPU 사용 추적**.
+에게 정보를 요청하여 요청된 크기 조정 내역을 볼 수 있습니다. **CSM(Customer Success Manager)**.
 각 크기 조정 요청에 대해 다음 정보를 사용할 수 있습니다.
 
 * **시작 일자 크기 조정**: 업데이트 요청 날짜.

@@ -3,9 +3,9 @@ title: 클라우드 인프라 업사이징에서 임시 Adobe Commerce을 요청
 description: 조직에서 트래픽이 많을 것으로 예상하는 온라인 이벤트를 계획하고 있거나, 갑자기 사이트가 높은 트래픽 이벤트를 받는 경우 [지원 티켓](/help/help-center-guide/help-center/magento-help-center-user-guide.md#submit-ticket)을 제출하여 Adobe Commerce on cloud infrastructure store에 대한 임시 클라우드 용량을 요청할 수 있습니다.
 exl-id: 561e2bdd-718a-45c1-8b6c-a0e3a6c8ad04
 feature: Cloud, Iaas
-source-git-commit: a445bae7f013b29cb83fc96eb26dcbfd186a4de7
+source-git-commit: 357e0acb1c849079ff0fe9f53fe386f60475c7f9
 workflow-type: tm+mt
-source-wordcount: '900'
+source-wordcount: '898'
 ht-degree: 0%
 
 ---
@@ -73,7 +73,7 @@ Adobe은 클라우드 인프라의 Adobe Commerce Pro 계획 아키텍처 및 �
 
 ## 업사이징 내역 보기
 
-에서 요청된 크기 조정 내역을 볼 수 있습니다. [프로젝트 포털 (온보딩 UI)](/docs/commerce-cloud-service/start/onboarding.html#cloud-project-portal-(onboarding-ui)), 아래 **프로젝트** > **서비스** > **CPU 사용 추적**.
+에게 정보를 요청하여 요청된 크기 조정 내역을 볼 수 있습니다. **CSM(Customer Success Manager)**.
 각 크기 조정 요청에 대해 다음 정보를 사용할 수 있습니다.
 
 * **시작 일자 크기 조정**: 업데이트 요청 날짜.
@@ -87,7 +87,7 @@ Adobe은 클라우드 인프라의 Adobe Commerce Pro 계획 아키텍처 및 �
 
 * 사이트 성과를 측정하고 개선하는 방법에 대한 통찰력, 방법 및 예는 지원 기술 자료에서 다음 심층 문서를 참조하십시오.
    * [클라우드에서 Adobe Commerce에 대한 CPU 할당 계산](/docs/commerce-knowledge-base/kb/how-to/magento-commerce-cloud-cpu-allocation-calculation.html)
-   * [클라우드에서 Adobe Commerce에 대해 호스트 인스턴스의 업사이징이 필요한지 확인하십시오](/docs/commerce-knowledge-base/kb/how-to/magento-commerce-cloud-check-if-upsize-for-hosts-instances-is-needed.html)
+   * [클라우드에서 Adobe Commerce에 대해 호스트 인스턴스의 업사이징이 필요한지 확인](/docs/commerce-knowledge-base/kb/how-to/magento-commerce-cloud-check-if-upsize-for-hosts-instances-is-needed.html)
    * [클라우드에서 Adobe Commerce에 대한 호스트의 CPU 구성 확인](/docs/commerce-knowledge-base/kb/how-to/magento-commerce-cloud-check-hosts-cpu-configuration.html)
 * 중단을 식별하는 방법에 대한 자세한 내용은 을 참조하십시오. [클라우드에서 Adobe Commerce에 대한 가동 중단 확인 및 측정](/docs/commerce-knowledge-base/kb/how-to/how-to-identify-outages.html) 을 참조하십시오.
 * 용량 증가를 활용할 필요가 없도록 사이트 성능을 개선하는 방법에 대한 자세한 내용은 개발자 설명서에서 다음 문서를 참조하십시오.
