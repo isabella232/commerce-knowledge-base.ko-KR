@@ -3,9 +3,9 @@ title: Adobe Commerce 도움말 센터 사용 안내서
 description: Adobe Commerce 도움말 센터에 지원 티켓을 제출하고, 계정에 대한 공유 액세스를 제공하고, Adobe Commerce 기술 자료를 탐색하는 방법에 대해 알아봅니다.
 exl-id: 9eb4814f-c9c4-4dd0-b68a-87d712898aa5
 feature: Support, Roles/Permissions, Tools and External Services, Admin Workspace, Iaas, Marketing Tools
-source-git-commit: 4e8833d100b776ca3c66a96274cde2d68eb0fd10
+source-git-commit: 86810427e8f902dc184b377257c8e86dd28f38f6
 workflow-type: tm+mt
-source-wordcount: '3993'
+source-wordcount: '3992'
 ht-degree: 0%
 
 ---
@@ -574,7 +574,7 @@ DELETE 링크가 누락된 경우 이는 공유 액세스가 Commerce Cloud을 �
 1. 에서 공유 액세스를 취소할 사용자를 찾아서 클릭합니다. **[!UICONTROL Edit]** 사용자 행(*[!UICONTROL Actions]* 열).
 1. 아래의 모든 리소스 선택 취소 *[!UICONTROL Grant Account Permissions]*.
 
-![이미지](https://git.corp.adobe.com/storage/user/38345/files/2d42fa60-559f-4697-a3cf-287c7e765405)
+![grant-account-permissions-image](assets/help-center-user-guide-grant-account-permissions-image.png){width="800"}
 
 자세한 내용은 다음을 참조하십시오. [사용자 액세스 관리](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/project/user-access.html#manage-users-from-the-project-web-interface) Commerce on Cloud Infrastructure 안내서에 대한 설명서입니다.
 
