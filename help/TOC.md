@@ -2,9 +2,9 @@
 user-guide-title: Adobe Commerce 기술 자료
 user-guide-description: Commerce 스토어와 관련된 문제를 해결하고 유지 관리하는 데 필요한 모든 것을 제공합니다.
 breadcrumb-title: Commerce KB
-source-git-commit: 5fb41bb335b03804f38b3bd95d699f0026ca8970
+source-git-commit: 45ab0d3a858239dc8a35ed81c3b0d2f7cda5c85b
 workflow-type: tm+mt
-source-wordcount: '11021'
+source-wordcount: '11031'
 ht-degree: 0%
 
 ---
@@ -1255,6 +1255,7 @@ ht-degree: 0%
    * [Magento Order Management 제거 방법](/help/how-to/general/how-to-remove-mom.md)
    * [Commerce 휴일 준비를 위한 기술 팁](/help/how-to/general/tech-tips-for-commerce-holiday-readiness.md)
    * [GraphQL 요청에 대해 WAF를 우회하는 방법](/help/how-to/general/how-to-bypass-waf-for-graphql-requests.md)
+   * [클라우드에서 Adobe Commerce용 MariaDB 10.4를 10.5로 업그레이드](/help/how-to/general/upgrade-mariadb-10-4-to-10-5-for-magento-commerce-cloud.md)
 * FAQ {#faq}
    * [FAQ 개요](/help/faq/overview.md)
    * [Fastly에서 제공하는 WAF(웹 애플리케이션 방화벽): FAQ](/help/faq/general/web-application-firewall-waf-powered-by-fastly-the-faq.md)
