@@ -4,16 +4,18 @@ description: 이 문서에서는 이전 팀원에게 전송되는 클라우드 �
 exl-id: b2535f66-8aec-4ddf-9a69-60879a0a1939
 feature: Cloud, Communications, Paas
 role: Developer
-source-git-commit: 075f295c5b600fcca9fbecc5aad20b0640d900f9
+source-git-commit: 0017d43e221ef3023630f714c34aa65b368e214f
 workflow-type: tm+mt
-source-wordcount: '227'
+source-wordcount: '244'
 ht-degree: 0%
 
 ---
 
 # 이전 팀원이 Adobe Commerce 클라우드 알림 이메일을 받습니다.
 
-이 문서에서는 더 이상 프로젝트와 연결되지 않은 팀원이 알림을 계속 받는 솔루션을 제공합니다.
+이 문서에서는 다음과 같은 사용자를 수신자의 알림 이메일 목록에서 제거하는 솔루션을 제공합니다.
+* 더 이상 프로젝트와 관련이 없는 이전 팀원
+* 알림을 받지 않아야 하는 현재 팀원
 
 ## 문제
 
