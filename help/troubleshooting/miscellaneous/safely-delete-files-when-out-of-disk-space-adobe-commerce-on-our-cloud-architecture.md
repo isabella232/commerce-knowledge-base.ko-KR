@@ -4,9 +4,9 @@ description: 이 문서에서는 디스크 공간이 부족하여 파일을 안�
 exl-id: 6b0a5c1a-8db4-49d7-a785-b4e0bbaea0df
 feature: Cloud, Paas
 role: Developer
-source-git-commit: 6af353bb379ee88248342a7cb514dd9d36d47a92
+source-git-commit: 86515936f72bbd0a5778cb81f665993ed91e4707
 workflow-type: tm+mt
-source-wordcount: '335'
+source-wordcount: '333'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 ## 영향을 받는 제품 및 버전
 
-* 클라우드 인프라의 Adobe Commerce: 2.3.0-2.3.7, 2.4.0-2.4.2-p1
+* 클라우드 인프라의 Adobe Commerce 2.4.2 - 2.4.7
 * 이는 전용 Pro 클러스터에만 해당됩니다. 시작 및 통합 환경은 단일 노드이며 `/data/exports` 디렉토리.
 
 ## 디스크 공간이 부족하다는 징후
