@@ -3,7 +3,7 @@ title: 클라우드 스냅숏을 사용하지 않고 환경 롤백
 description: 이 문서에서는 클라우드 인프라의 Adobe Commerce에서 환경 스냅숏을 만들지 않고 환경을 롤백하는 두 가지 솔루션을 보여 줍니다.
 exl-id: 834d13a7-3b1a-460c-9ed0-9d560105f436
 feature: Build, Cloud, Console
-source-git-commit: f3c976bd44dbc47bd5cc8076f1679d56910cfaf3
+source-git-commit: 5347e8714ef1374440f5d246100a0221e4b189fc
 workflow-type: tm+mt
 source-wordcount: '800'
 ht-degree: 0%
@@ -44,13 +44,13 @@ ht-degree: 0%
 
 배포 중에 이전 구성 설정을 자동으로 적용하지 않도록 구성 관리를 비활성화해야 합니다.
 
-구성 관리를 비활성화하려면 `/app/etc/` 디렉터리에 다음 항목이 없습니다. `config.php` (Adobe Commerce 2.2.x용) 또는 `config.local.php` (Adobe Commerce 2.1.x의 경우) 파일.
+구성 관리를 비활성화하려면 `/app/etc/` 디렉터리에 다음 항목이 없습니다. `config.php` (Adobe Commerce 2.4.x용) 또는 `config.local.php` (Adobe Commerce 2.1.x의 경우) 파일.
 
 구성 파일을 제거하려면 다음 단계를 수행하십시오.
 
 1. [환경에 SSH 추가](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/secure-connections.html).
 1. 구성 파일을 제거합니다.
-   * Adobe Commerce 2.2의 경우:
+   * Adobe Commerce 2.4의 경우:
 
    ```php
     rm app/etc/config.php
