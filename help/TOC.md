@@ -2,9 +2,9 @@
 user-guide-title: Adobe Commerce 기술 자료
 user-guide-description: Commerce 스토어와 관련된 문제를 해결하고 유지 관리하는 데 필요한 모든 것을 제공합니다.
 breadcrumb-title: Commerce KB
-source-git-commit: 45ab0d3a858239dc8a35ed81c3b0d2f7cda5c85b
+source-git-commit: ee1ba9c0bb07c260058f53696c88ced737899361
 workflow-type: tm+mt
-source-wordcount: '11031'
+source-wordcount: '11032'
 ht-degree: 0%
 
 ---
@@ -821,6 +821,7 @@ ht-degree: 0%
       * [Adobe 지원 고객 데이터 액세스 및 개인정보 보호](/help/announcements/adobe-commerce-announcements/adobe-support-customer-data-access-and-privacy.md)
       * [더 이상 사용되지 않는 UPS API](/help/announcements/adobe-commerce-announcements/ups-apis-deprecated.md)
       * [2024 릴리스 일정](/help/announcements/adobe-commerce-announcements/2024-release-schedule.md)
+      * [테스트](/help/announcements/adobe-commerce-announcements/test.md)
    * 도움말 센터 뉴스 {#news}
       * [Adobe Commerce 지원 기술 자료에서 기여 접수를 시작합니다.](/help/announcements/help-center-news/github-repo-for-external-contributions.md)
 * 문제 해결 {#troubleshooting}
