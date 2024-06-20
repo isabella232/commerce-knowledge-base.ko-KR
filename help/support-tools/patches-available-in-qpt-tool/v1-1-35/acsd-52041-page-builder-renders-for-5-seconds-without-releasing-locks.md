@@ -4,16 +4,16 @@ description: ACSD-52041 패치를 적용하여 잠금 해제 없이 5초 동안 
 feature: Page Builder
 role: Admin, Developer
 exl-id: f2a1fd36-2098-46a7-aa42-3a5a0014adc9
-source-git-commit: 7718a835e343ae7da9ff79f690503b4ee1d140fc
+source-git-commit: fc5dc9fcf610cae6f8c0a334b4ef15029c462c66
 workflow-type: tm+mt
-source-wordcount: '333'
+source-wordcount: '339'
 ht-degree: 0%
 
 ---
 
 # ACSD-52041: 페이지 빌더 렌더링이 잠금을 해제하지 않음
 
-ACSD-52041 패치는 잠금 해제 없이 5초 동안 페이지 빌더가 렌더링되는 문제를 해결합니다. 이 패치는 다음 경우에 사용할 수 있습니다. [!DNL Quality Patches Tool (QPT)] 1.1.35가 설치되어 있습니다. 패치 ID는 ACSD-52041입니다. 이 문제는 Adobe Commerce 2.4.7에서 수정됩니다.
+ACSD-52041 패치는 잠금 해제 없이 5초 동안 페이지 빌더가 렌더링되는 문제를 해결합니다. 이 패치는 다음 경우에 사용할 수 있습니다. [!DNL Quality Patches Tool (QPT)] 1.1.48이 설치되었습니다. 패치 ID는 ACSD-52041-v2입니다. 이 문제는 Adobe Commerce 2.4.7에서 수정됩니다.
 
 ## 영향을 받는 제품 및 버전
 
@@ -23,7 +23,7 @@ ACSD-52041 패치는 잠금 해제 없이 5초 동안 페이지 빌더가 렌더
 
 **Adobe Commerce 버전과 호환:**
 
-* Adobe Commerce(모든 배포 방법) 2.4.4 - 2.4.6-p1
+* Adobe Commerce(모든 배포 방법) 2.4.4 - 2.4.4-p8, 2.4.5 - 2.4.5-p7, 2.4.6 - 2.4.6-p6
 
 >[!NOTE]
 >
