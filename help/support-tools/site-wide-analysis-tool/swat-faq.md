@@ -4,9 +4,9 @@ description: '에 대해 알아보기 [!DNL Site-Wide Analysis Tool]: Adobe Comm
 exl-id: 7c843d55-9e2c-4b18-8859-0ebad0ae28cf
 feature: Best Practices, Saas, Support, Tools and External Services
 role: Admin
-source-git-commit: 4e327654279095f6523a7cbec77bd2dca57b2034
+source-git-commit: 580ad148cd4346868cd9892a1ae9a4d85f73edce
 workflow-type: tm+mt
-source-wordcount: '346'
+source-wordcount: '372'
 ht-degree: 0%
 
 ---
@@ -58,3 +58,7 @@ ht-degree: 0%
 ## 보고서는 어떻게 전달됩니까?
 
 [!DNL Site-Wide Analysis Tool] 보고서는 월별 또는 분기별로 Adobe Commerce 지원 티켓 시스템을 통해 자동으로 전달됩니다. [!DNL Site-Wide Analysis Tool] 보고서는 [!DNL Site-Wide Analysis Tool] 대시보드를 사용하고 데스크톱에 저장하십시오. 다음 [!DNL Site-Wide Analysis Tool] 그런 다음 보고서를 첨부 파일로 이메일로 보낼 수 있습니다.
+
+>[!NOTE]
+>
+>권장 사항을 적용한 후 보고서를 수동으로 생성해도 권장 사항이 업데이트되지 않습니다. 보고서에서 제거되는 데 며칠이 걸릴 수 있습니다. [!DNL Site-Wide Analysis Tool Dashboard].
