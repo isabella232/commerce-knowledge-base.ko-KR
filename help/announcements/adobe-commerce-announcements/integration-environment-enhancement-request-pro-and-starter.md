@@ -4,9 +4,9 @@ description: Adobe Commerce on cloud infrastructure Pro 계획 아키텍처 고�
 exl-id: c49b049b-efb8-412f-b27d-a89f8a758d85
 feature: Integration
 role: Admin
-source-git-commit: 43be85de953909253900d60488f76a20bac91793
+source-git-commit: fb26b71316e04de31fa6a895b87230bed5c1ca6a
 workflow-type: tm+mt
-source-wordcount: '568'
+source-wordcount: '645'
 ht-degree: 0%
 
 ---
@@ -14,6 +14,12 @@ ht-degree: 0%
 # 통합 환경 개선 요청 - Pro 및 Starter
 
 Adobe Commerce on cloud infrastructure Pro 계획 아키텍처 고객이고 현재 표준 크기의 통합 환경을 사용하는 경우 또는 Adobe Commerce on cloud infrastructure Starter 계획 아키텍처 고객이고 현재 표준 크기의 스테이징 환경을 사용하는 경우 약 4배의 성능을 제공하는 향상된 통합 환경으로 업그레이드를 요청할 수 있습니다. 이 문서에서는 Pro 고객과 Starter 고객을 위한 지침을 구분합니다.
+
+>[!NOTE]
+>
+> 향상된 통합으로 업그레이드하면 타사 통합 또는 사용자 지정을 포함하여 설치의 총 리소스 요구 사항에 따라 달라지므로 모든 성능 문제를 해결하지 못할 수 있습니다.
+>
+> 또한 통합 환경에서 최고의 성능을 발휘하기 위한 모범 사례를 따르고 있는지 확인해야 하며, 그 조차도 완벽한 솔루션이 아닐 수 있습니다. 지침은 다음 설명서를 참조하십시오. [Pro 아키텍처](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/architecture/pro-architecture#integration-environment) 및 [스타터 아키텍처](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/architecture/starter-architecture#staging-environment) Commerce on Cloud Infrastructure Guide를 참조하십시오.
 
 ## Pro
 
