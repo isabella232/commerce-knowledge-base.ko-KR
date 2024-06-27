@@ -2,9 +2,9 @@
 user-guide-title: Adobe Commerce 기술 자료
 user-guide-description: Commerce 스토어와 관련된 문제를 해결하고 유지 관리하는 데 필요한 모든 것을 제공합니다.
 breadcrumb-title: Commerce KB
-source-git-commit: 449e37e140e7df13be8d59a61a33c6298cb65f53
+source-git-commit: 366e27875cd3a764d99d62997336c11adafcb623
 workflow-type: tm+mt
-source-wordcount: '11040'
+source-wordcount: '11052'
 ht-degree: 0%
 
 ---
@@ -1066,7 +1066,7 @@ ht-degree: 0%
       * [xdebug 설치에 영향을 주는 알려진 문제](/help/troubleshooting/miscellaneous/known-issues-that-affect-installation.md)
       * [Adobe Commerce 지원 또는 클라우드 계정에 로그인할 수 없음](/help/troubleshooting/miscellaneous/unable-to-log-in-to-support-or-cloud-project.md)
       * [충돌하는 구성 요소 종속성](/help/troubleshooting/miscellaneous/conflicting-component-dependencies.md)
-      * [Adobe Commerce Intelligence Service 정책](/help/troubleshooting/miscellaneous/mbi-service-policies.md)
+      * [Adobe Commerce Intelligence 서비스 정책](/help/troubleshooting/miscellaneous/mbi-service-policies.md)
       * [Git에서 푸시할 때 프로덕션에 배치되는 새 환경](/help/troubleshooting/miscellaneous/when-pushed-from-git-environments-placed-under-production-on-magento-cloud.md)
       * [Commerce 관리자에 로그인한 후 오류 발생](/help/troubleshooting/miscellaneous/error-after-logging-in-to-the-magento-admin.md)
       * [Adobe Commerce에 대한 Magento Order Management 시스템(OMS) 시간 초과](/help/troubleshooting/miscellaneous/mom-times-out-when-trying-to-connect-to-a-local-environment.md)
@@ -1113,6 +1113,7 @@ ht-degree: 0%
       * [배포 실패: &#39;cache&#39; 네임스페이스 오류에 정의된 명령이 없습니다.](/help/troubleshooting/deployment/deployment-failed-there-are-no-commands-defined-in-the-cache-namespace-error.md)
       * [env:COMPOSER_AUTH 또는 auth.json에 올바른 액세스 키가 있어 배포가 실패합니다.](/help/troubleshooting/deployment/deployment-failed-with-correct-access-key-env-composer-auth.md)
    * 알려진 문제 {#known-issues-patches-attached}
+      * [Adobe Commerce에 사용 가능한 보안 업데이트 - [!DNL APSB24-40] 에 대해 격리된 패치를 포함하도록 수정되었습니다. [!DNL CVE-2024-34102]](/help/troubleshooting/known-issues-patches-attached/security-update-available-for-adobe-commerce-apsb24-40-revised-to-include-isolated-patch-for-cve-2024-34102.md)
       * [[!DNL UPS] 에서 배송 방법 통합 마이그레이션 [!DNL SOAP] 끝 [!DNL RESTful API]](/help/troubleshooting/known-issues-patches-attached/ups-shipping-method-integration-migration-from-soap-to-restful-api.md)
       * [[!DNL USPS] AC-9182용 Ground Advantage 배송 방법 지원 핫픽스](/help/troubleshooting/known-issues-patches-attached/usps-ground-advantage-shipping-method-support-hotfix-for-ac-9182.md)
       * [Adobe Commerce 2.4.3-p2 - CVE-2022-35698용 2.4.5 보안 핫픽스](/help/troubleshooting/known-issues-patches-attached/adobe-commerce-2-4-3-p2-2-4-5-security-hotfix-for-cve-2022-35698.md)
