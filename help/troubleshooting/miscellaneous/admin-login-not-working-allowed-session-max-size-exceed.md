@@ -2,9 +2,9 @@
 title: '[!DNL Admin] 로그인이 작동하지 않음 - 허용된 세션 최대 크기 초과'
 description: 에 로그인하려고 할 때 문제를 해결합니다. [!DNL Admin] 패널 및 양식이 새로 고침되고 로그인할 수 없습니다.
 exl-id: 12789df0-6130-4e60-a92a-68ed329bd7fd
-source-git-commit: 7718a835e343ae7da9ff79f690503b4ee1d140fc
+source-git-commit: 8718148f6d9a40c9a71484a7fbc818a626e825e1
 workflow-type: tm+mt
-source-wordcount: '315'
+source-wordcount: '318'
 ht-degree: 0%
 
 ---
@@ -53,6 +53,6 @@ bin/magento config:set system/security/max_session_size_admin 500000
 
 ## 관련 읽기
 
-* [세션 크기](/docs/commerce-admin/systems/security/security-session-management.html?lang=en#admin-sessions) 관리 시스템 안내서에서 확인할 수 있습니다.
-* [작업 모드](/docs/commerce-operations/configuration-guide/cli/set-mode.html) 구성 안내서에서 참조할 수 있습니다.
-* [보안 연결](/docs/commerce-cloud-service/user-guide/develop/secure-connections.html) Commerce on Cloud Infrastructure Guide를 참조하십시오.
+* [세션 크기](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/security/security-session-management#admin-sessions) 관리 시스템 안내서에서 확인할 수 있습니다.
+* [작업 모드](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cli/set-mode) 구성 안내서에서 참조할 수 있습니다.
+* [보안 연결](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/develop/secure-connections) Commerce on Cloud Infrastructure Guide를 참조하십시오.
