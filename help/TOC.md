@@ -2,9 +2,9 @@
 user-guide-title: Adobe Commerce 기술 자료
 user-guide-description: Commerce 스토어와 관련된 문제를 해결하고 유지 관리하는 데 필요한 모든 것을 제공합니다.
 breadcrumb-title: Commerce KB
-source-git-commit: 366e27875cd3a764d99d62997336c11adafcb623
+source-git-commit: c8e688b59f0d66dc32da098c185d81b14c6770bc
 workflow-type: tm+mt
-source-wordcount: '11052'
+source-wordcount: '11064'
 ht-degree: 0%
 
 ---
@@ -912,6 +912,7 @@ ht-degree: 0%
       * [Adobe Commerce 사이트 작동 중지 문제 해결사](/help/troubleshooting/site-down-or-unresponsive/magento-site-down-troubleshooter.md)
       * [패치를 적용하면 사이트가 다운됩니다.](/help/troubleshooting/site-down-or-unresponsive/applying-a-patch-takes-your-site-down.md)
       * [콘텐츠 스테이징 문제로 인한 모든 페이지 오류 404](/help/troubleshooting/site-down-or-unresponsive/error-404-on-all-pages-due-to-content-staging-issue.md)
+      * [모든 Adobe Commerce 버전에서 Google 맵 액세스 손실에 대한 패치를 수정했습니다.](/help/troubleshooting/installation-and-upgrade/revised-patches-for-google-maps-access-loss-on-all-adobe-commerce-versions.md)
    * 기타 {#miscellaneous}
       * [이유 확인 방법 [!DNL cron] 비활성화됨](/help/troubleshooting/miscellaneous/how-to-check-why-cron-was-disabled.md)
       * [오류 [!DNL opensearch] 검색 엔진이 존재하지 않습니다. 으로 폴백 [!DNL livesearch].](/help/troubleshooting/miscellaneous/error-opensearch-search-engine-doesnt-exist-falling-back-to-livesearch.md)
