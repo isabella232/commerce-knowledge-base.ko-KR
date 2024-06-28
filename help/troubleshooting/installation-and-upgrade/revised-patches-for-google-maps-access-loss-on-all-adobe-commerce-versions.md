@@ -3,7 +3,7 @@ title: 모든 Adobe Commerce 버전에서 Google 맵 액세스 손실에 대한 
 description: '이 문서는 최근 항목과 호환되지 않는 Adobe Commerce 판매자에 대한 수정 사항을 제공합니다. [!DNL Google Maps] 버전: 3.54+.'
 feature: Install, Upgrade
 role: Developer
-source-git-commit: 575fce2f678321ff184779895d43be90828c2ce4
+source-git-commit: 98581cc9c251976339406f80764715096321126b
 workflow-type: tm+mt
 source-wordcount: '313'
 ht-degree: 0%
@@ -23,13 +23,13 @@ ht-degree: 0%
 
 날짜 *2024년 6월 14일* [!DNL Google Maps] 버전 *3.53* 수명 종료에 도달했으며에 의해 꺼져 있음 [!DNL Google].
 
-[자세한 내용은 ([!DNL Google Maps Platform: Maps JavaScript API])] (https://developers.google.com/maps/documentation/javascript/versions#documentation-for-the-api-versions)
+자세한 내용은 다음을 참조하십시오. [[!DNL Google Maps Platform: Maps JavaScript API]](https://developers.google.com/maps/documentation/javascript/versions#documentation-for-the-api-versions).
 
 Adobe Commerce은 최신 버전과 호환되지 않습니다. [!DNL  Google Maps] 버전 3.54 이상.
 
 비호환성은 레거시로 인해 발생했습니다 `prototype.js script`, 다음을 통해 로드됨 `lib/web/legacy-build.min.js` 네이티브 Array.from 함수를 재정의하여 이 함수를 재정의하면 다음과 직접 충돌이 발생합니다. [!DNL  Google Maps] API.
 
-( 참조)[!DNL Google Maps: JS Best Practices])] (https://developers.google.com/maps/documentation/javascript/best-practices)
+을(를) 참조하십시오 [[!DNL Google Maps: JS Best Practices]](https://developers.google.com/maps/documentation/javascript/best-practices).
 
 <u>재현 단계</u> :
 
