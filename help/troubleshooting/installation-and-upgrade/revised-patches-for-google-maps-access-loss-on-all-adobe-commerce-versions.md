@@ -3,7 +3,7 @@ title: 모든 Adobe Commerce 버전에서 Google 맵 액세스 손실에 대한 
 description: '이 문서는 최근 항목과 호환되지 않는 Adobe Commerce 판매자에 대한 수정 사항을 제공합니다. [!DNL Google Maps] 버전: 3.54+.'
 feature: Install, Upgrade
 role: Developer
-source-git-commit: 98581cc9c251976339406f80764715096321126b
+source-git-commit: cf235c2fdd7a36d7e3b126de35c51e6711cd3845
 workflow-type: tm+mt
 source-wordcount: '313'
 ht-degree: 0%
@@ -47,7 +47,7 @@ Adobe Commerce은 최신 버전과 호환되지 않습니다. [!DNL  Google Maps
 
 ## 솔루션
 
-* 패치 버전 2.4.4, 2.4.5, 2.4.6 또는 2.2.7의 모든 판매자는 해당 패치를 해당 버전에 적용해야 합니다.
+* 패치 버전 2.4.4, 2.4.5, 2.4.6 또는 2.4.7의 모든 판매자는 해당 패치를 해당 버전에 적용해야 합니다.
 
 ## 패치
 
