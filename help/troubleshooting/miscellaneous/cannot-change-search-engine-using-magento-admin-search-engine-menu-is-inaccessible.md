@@ -4,9 +4,9 @@ description: 이 문서에서는 검색 엔진 필드가 표시되지 않거나 
 exl-id: 5b0f728c-6a8d-446d-9553-5abc3d01e516
 feature: Admin Workspace, Search, Variables
 role: Developer
-source-git-commit: e9f009cf4e072dcd9784693c10a4c16746af3cc5
+source-git-commit: 0ea7bbef7fec556f9a90151be9cf1077f5cfac45
 workflow-type: tm+mt
-source-wordcount: '842'
+source-wordcount: '833'
 ht-degree: 0%
 
 ---
@@ -41,13 +41,14 @@ ht-degree: 0%
 
 ## 관리자를 사용하여 검색 엔진 변경(단계)
 
-1. 관리자로 관리자에 로그인합니다.
-1. 왼쪽 관리 사이드바에서 **스토어**. 그런 다음 아래에 **설정**, 선택 **구성**.
-1. 왼쪽 아래에 있는 패널에서 **카탈로그,** 선택 **카탈로그**.
-1. 확장 **카탈로그 검색** 섹션.    ![catalog_menu.png](assets/catalog_menu.png)
-1. 로 이동 **검색 엔진** 필드 및 선택 항목 제거 **시스템 값 사용** 확인란.
-1. 다음을 클릭합니다. **검색 엔진** 을 클릭하고 사용 가능한 옵션 중 하나를 선택합니다.    ![search_engine_menu.png](assets/search_engine_menu.png)
-1. 클릭 **구성 저장** 을 클릭합니다.
+1. 에 로그인합니다 **[!UICONTROL Admin]** 관리자로서.
+1. 의 왼쪽에 **[!UICONTROL Admin]** 사이드바, 클릭 **[!UICONTROL Stores]**.
+1. 아래 **[!UICONTROL Settings]**, 선택 **[!UICONTROL Configuration]**.
+1. 아래의 왼쪽 패널로 이동합니다. **[!UICONTROL Catalog],** 및 선택 **[!UICONTROL Catalog]**.
+1. 확장 **[!UICONTROL Catalog Search]** 섹션.    ![catalog_menu.png](assets/catalog_menu.png)
+1. 로 이동 **[!UICONTROL Search Engine]** 필드 및 선택 항목 제거 **[!UICONTROL Use system value]** 확인란.
+1. 다음을 클릭합니다. **[!UICONTROL Search Engine]** 을 클릭하고 아래와 같이 사용 가능한 옵션 중 하나를 선택합니다.    ![search_engine_menu.png](assets/search_engine_menu.png)
+1. 클릭 **[!UICONTROL Save Config]** 을 클릭합니다.
 
 ## Adobe Commerce 온-프레미스 문제
 
@@ -65,10 +66,11 @@ ht-degree: 0%
 
 ### 해결 방법: 저장소 보기를 기본 구성으로 설정
 
-1. 관리자로 관리자에 로그인합니다.
-1. 왼쪽 관리 사이드바에서 **스토어**. 그런 다음 아래에 **설정**, 선택 **구성**.
-1. 왼쪽 위 모서리에서 **스토어 뷰** 선택기 및 선택 *기본 구성*.
-1. 클릭 **확인** 확인 대화 상자에서 스토어 보기 변경을 승인합니다.
+1. 에 로그인합니다 **[!UICONTROL Admin]** 관리자로서.
+1. 의 왼쪽에 **[!UICONTROL Admin]** 사이드바, 클릭 **[!UICONTROL Stores]**.
+1. 다음으로 이동 **[!UICONTROL Settings]** 및 선택 **[!UICONTROL Configuration]**.
+1. 왼쪽 상단 모서리에서 **[!UICONTROL Store View]** 선택기 및 선택 **[!UICONTROL *기본 구성&#x200B;*]**.
+1. 클릭 **[!UICONTROL OK]** 저장소 보기 변경 사항을 승인하는 확인 대화 상자.
 
 ![change_store_view.png](assets/change_store_view.png)
 
