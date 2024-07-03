@@ -2,9 +2,9 @@
 title: 스테이징 또는 프로덕션에서 DB 스냅샷 복원
 description: 이 문서에서는 클라우드 인프라의 Adobe Commerce에서 스테이징 또는 프로덕션에서 DB 스냅샷을 복원하는 방법을 보여 줍니다.
 exl-id: 1026a1c9-0ca0-4823-8c07-ec4ff532606a
-source-git-commit: b9e72ff8d541ad01788e5198e03abcb46a1bd11f
+source-git-commit: ad0ec2e6dc1d3e1023ad4ecda595b5c942716407
 workflow-type: tm+mt
-source-wordcount: '326'
+source-wordcount: '345'
 ht-degree: 0%
 
 ---
@@ -124,16 +124,22 @@ ht-degree: 0%
 
 1. 다음 명령을 입력하여 [!DNL snapshot]:
 
-   (대상 [!DNL Production])
+   (데이터베이스 백업을 가져올 위치 [!DNL Production])
 
    ```sql
    zcat <cluster ID>.sql.gz | sed -e 's/DEFINER[ ]*=[ ]*[^*]*\*/\*/' | mysql -h 127.0.0.1 -p -u <db-user> <db-name>
    ```
 
-   (대상 [!DNL Staging])
+   (데이터베이스 백업을 가져올 위치 [!DNL Staging])
 
    ```sql
    zcat <cluster ID_stg>.sql.gz | sed -e 's/DEFINER[ ]*=[ ]*[^*]*\*/\*/' | mysql -h 127.0.0.1 -p -u <db-user> <db-name>
+   ```
+
+   (다른 환경에서 데이터베이스 백업을 가져오는 경우)
+
+   ```sql
+   zcat <database-backup-name>.sql.gz | sed -e 's/DEFINER[ ]*=[ ]*[^*]*\*/\*/' | mysql -h 127.0.0.1 -p -u <db-user> <db-name>
    ```
 
 ## 관련 읽기
