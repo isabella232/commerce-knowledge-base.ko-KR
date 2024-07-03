@@ -4,7 +4,7 @@ description: 이 문서에서는 다른 cron 작업을 차단하는 특정 장�
 exl-id: b5b9e8b3-373c-4f93-af9c-85da84dbc928
 feature: Configuration
 role: Developer
-source-git-commit: 1d2e0c1b4a8e3d79a362500ee3ec7bde84a6ce0d
+source-git-commit: faa80e8233438fc15781341b3a9d5325269d6d20
 workflow-type: tm+mt
 source-wordcount: '405'
 ht-degree: 0%
@@ -71,4 +71,4 @@ cron 작업에 의해 실행되는 프로세스는 수행되지 않습니다. �
 
 ## 관련 읽기
 
-* [cron 작업 설정](https://devdocs.magento.com/guides/v2.3/cloud/configure/setup-cron-jobs.html) 개발자 설명서에서
+* [cron 작업 설정](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cli/configure-cron-jobs) 개발자 설명서에서 확인할 수 있습니다.
