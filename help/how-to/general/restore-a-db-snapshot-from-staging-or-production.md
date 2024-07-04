@@ -2,9 +2,9 @@
 title: 스테이징 또는 프로덕션에서 DB 스냅샷 복원
 description: 이 문서에서는 클라우드 인프라의 Adobe Commerce에서 스테이징 또는 프로덕션에서 DB 스냅샷을 복원하는 방법을 보여 줍니다.
 exl-id: 1026a1c9-0ca0-4823-8c07-ec4ff532606a
-source-git-commit: ad0ec2e6dc1d3e1023ad4ecda595b5c942716407
+source-git-commit: b99d78845128ca3d995cbbb5df0799449ca954e3
 workflow-type: tm+mt
-source-wordcount: '345'
+source-wordcount: '354'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 0%
 
 단계는 다음과 같습니다.
 
-1. 사용 [!DNL sFTP]를 클릭하고 데이터베이스가 있는 위치로 이동합니다. [!DNL snapshot] 이(가) 배치되었습니다(일반적으로 의 첫 번째 서버/노드). [!DNL cluster] (예: `/mnt/recovery-<recovery_id>`). 참고: 프로젝트가 Azure 기반 프로젝트인 경우, 즉 프로젝트 URL은 https://us-a1.magento.cloud/projects/ 과 비슷합니다.&lt;cluster_id>스냅샷이에 배치됩니다. `/mnt/shared/<cluster ID>/all-databases.sql.gz` 또는 `/mnt/shared/<cluster ID_stg>/all-databases.sql.gz` 대신,
+1. 사용 [!DNL SFTP]를 클릭하고 데이터베이스가 있는 위치로 이동합니다. [!DNL snapshot] 이(가) 배치되었습니다(일반적으로 의 첫 번째 서버/노드). [!DNL cluster] (예: `/mnt/recovery-<recovery_id>`). 참고: 프로젝트가 Azure 기반 프로젝트인 경우, 즉 프로젝트 URL은 https://us-a1.magento.cloud/projects/ 과 비슷합니다.&lt;cluster_id>스냅샷이에 배치됩니다. `/mnt/shared/<cluster ID>/all-databases.sql.gz` 또는 `/mnt/shared/<cluster ID_stg>/all-databases.sql.gz` 대신,
 
    참고: Azure 프로젝트의 스냅숏 형식은 다르며 가져올 수 없는 다른 데이터베이스를 포함합니다. 스냅샷을 가져오기 전에 추가 단계를 수행하여 적절한 데이터베이스를 추출한 후 덤프를 가져와야 합니다.
 
@@ -134,6 +134,12 @@ ht-degree: 0%
 
    ```sql
    zcat <cluster ID_stg>.sql.gz | sed -e 's/DEFINER[ ]*=[ ]*[^*]*\*/\*/' | mysql -h 127.0.0.1 -p -u <db-user> <db-name>
+   ```
+
+   (다른 환경에서 데이터베이스 백업을 가져오는 경우)
+
+   ```sql
+   zcat <database-backup-name>.sql.gz | sed -e 's/DEFINER[ ]*=[ ]*[^*]*\*/\*/' | mysql -h 127.0.0.1 -p -u <db-user> <db-name>
    ```
 
    (다른 환경에서 데이터베이스 백업을 가져오는 경우)
