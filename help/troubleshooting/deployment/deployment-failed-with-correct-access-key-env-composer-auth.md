@@ -4,9 +4,9 @@ description: 이 문서에서는 "https://repo.magento.com/archives/magento/modu
 feature: Deploy
 role: Admin
 exl-id: a18f4213-7381-4001-a5a0-3f8db4525469
-source-git-commit: 7804e7094fb05d1cce9747c8f96c3cfe6bc6171e
+source-git-commit: 9f9dc8374bb681398ed1c295ac15679553cfc74e
 workflow-type: tm+mt
-source-wordcount: '246'
+source-wordcount: '244'
 ht-degree: 0%
 
 ---
@@ -40,8 +40,7 @@ W:   The "https://repo.magento.com/archives/magento/module-customer-balance/mage
 >
 >예제 오류입니다. 배포하는 Adobe Commerce 버전에 따라 다른 파일을 나타내는 오류가 발생할 수 있습니다.
 
-을 배포하지 못했습니다. 다음과 같은 오류가 표시됩니다. *&quot;https://repo.magento.com/archives/magento/module-customer-balance/magento-module-customer-balance-100.4.0.0.zip&quot; 파일을 다운로드할 수 없습니다(HTTP/1.1 404 찾을 수 없음).* 다음에서 [배포 로그](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/develop/test/log-locations#deploy-log).
-
+을 배포하지 못했습니다. 다음과 같은 오류가 표시됩니다. *&quot;https://repo.magento.com/archives/magento/module-customer-balance/magento-module-customer-balance-100.4.0.0.zip&quot; 파일을 다운로드할 수 없습니다(HTTP/1.1 404 찾을 수 없음).* 다음에서 [배포 로그](/docs/commerce-cloud-service/user-guide/develop/test/log-locations#deploy-log).
 
 ### 원인
 
@@ -59,4 +58,4 @@ W:   The "https://repo.magento.com/archives/magento/module-customer-balance/mage
 ## 관련 읽기
 
 * [클라우드 저장소의 Adobe Commerce에 액세스할 수 없습니다. 배포 시 403 금지됨 또는 404 찾을 수 없음 오류](/docs/commerce-knowledge-base/kb/troubleshooting/deployment/magento-commerce-cloud-repo-could-not-be-accessed-403-forbidden-or-404-not-found-error-when-deploying.html)
-* [배포 오류: 다운로드 중 오류 7.. 포트 443: 연결이 거부되었습니다.](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/deployment/deployment-error-downloading-connection-refused-adobe-commerce)
+* [배포 오류: 다운로드 중 오류 7.. 포트 443: 연결이 거부되었습니다.](/help/troubleshooting/deployment/deployment-error-downloading-connection-refused-adobe-commerce.md)
